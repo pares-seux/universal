@@ -1,0 +1,92 @@
+.main
+  position: relative
+  padding-top: 30px
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    bottom: 125px
+    background-color: $dark
+    z-index: -10
+  &-wrapper
+    display: grid
+    grid-template-columns: 1fr 263px
+    border-radius: 10px
+    overflow: hidden
+  &-article
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    z-index: 1
+    padding: 55px 224px 100px 55px
+    &__image
+      @include absolute
+      z-index: -1
+    &__title
+      font-family: $roboto
+      font-style: normal
+      font-weight: 700
+      font-size: 40px
+      line-height: 50px
+      color: $light
+      margin: 20px 0 50px
+    &__button
+      display: block
+  &__recommendations
+    grid-column: 2
+.author
+  display: flex
+  align-items: center
+  &__avatar
+    width: 45px
+    height: 45px
+    margin-right: 10px
+    border-radius: 50%
+  &__text
+    color: $light
+    font-family: $lato
+    font-style: normal
+    font-weight: 400
+  &__name
+    font-size: 14px
+    line-height: 20px
+    margin: 0
+  &__description
+    font-size: 12px
+    line-height: 15px
+    opacity: 0.4
+.recommendations
+  background-color: $light
+  padding-bottom: 10px
+  &__title
+    margin: 20px 25px 18px
+    color: #262D33
+    font-family: $lato
+    font-style: normal
+    font-weight: 900
+    font-size: 14px
+    line-height: 20px
+    letter-spacing: 0.5px
+    text-transform: uppercase
+  &-list
+    list-style-type: none
+    margin: 0
+    padding: 0
+    &__item
+      padding: 16px 25px 18px 25px
+      min-height: 100px
+      border-top: $pipe
+    &__link
+      text-decoration: none
+    &__tag
+    &__description
+      margin: 5px 0 0
+      color: #4B5157
+      font-family: $lato
+      font-style: normal
+      font-weight: 400
+      font-size: 14px
+      line-height: 20px

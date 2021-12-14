@@ -14,7 +14,7 @@
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <header class="navbar navbar--main navabar--mobile_fixed">
+  <header class="navbar navbar-main navbar-main--mobile_fixed">
     <div class="container">
       <div class="navbar-container">
         <a href="" class="logo">
@@ -68,22 +68,64 @@
     <div class="container">
       <div class="main-wrapper">
         <div class="main-article article">
-          <div class="author">
+          <img src="img/main-article.jpg" alt="Main article image" class="main-article__image">
+          <div class="author main-article__author">
             <img src="/img/author-avatar.png" alt="Avatar: David" class="avatar author__avatar">
-            <div class="author__description">
+            <div class="author__text">
               <h3 class="author__name">Давид Гуров</h3>
               <span class="author__description">Разработчик</span>
             </div>
           </div>
           <!-- /.author -->
-          <span class="tag main-article__tag">Javascript</span>
-          <h1 class="main-article__title">Расширение Chrome защищает от атак</h1>
-          <button class="button">
-            Читать далее
-            <img src="/img/icons/Arrow.svg" alt="Icon: arrow">
-          </button>
+          <div class="main-article__description">
+            <span class="tag tag--news main-article__tag">Javascript</span>
+            <h1 class="main-article__title">Расширение Chrome защищает от атак</h1>
+            <button class="button main-article__button">
+              <span>Читать далее</span> 
+              <img src="/img/icons/Arrow.svg" alt="Icon: arrow" class="button__icon">
+            </button>
+          </div>
+          <!-- /.main-article__description -->
         </div>
         <!-- /.main-article -->
+        <div class="recommendations main__recommendations">
+          <h3 class="recommendations__title">
+            Рекомендуем
+          </h3>
+          <ul class="recommendations-list">
+            <li class="recommendations-list__item">
+              <a href="" class="recommendations-list__link">
+                <span class="tag tag--opinion recommendations-list__tag">CSS</span>
+                <p class="recommendations-list__description">Как использовать CSS float после того, как вышел Flexbox</p>
+              </a>
+            </li>
+            <li class="recommendations-list__item">
+              <a href="" class="recommendations-list__link">
+                <span class="tag tag--javascript recommendations-list__tag">Javascript</span>
+                <p class="recommendations-list__description">На каком стандарте писать скрипты, если я фрилансер</p>
+              </a>
+            </li>
+            <li class="recommendations-list__item">
+              <a href="" class="recommendations-list__link">
+                <span class="tag tag--collection recommendations-list__tag">HTML</span>
+                <p class="recommendations-list__description">Правильно вставляем картинку на сайт для Retina дисплея</p>
+              </a>
+            </li>
+            <li class="recommendations-list__item">
+              <a href="" class="recommendations-list__link">
+                <span class="tag tag--design recommendations-list__tag">Web design</span>
+                <p class="recommendations-list__description">ТОП-10 плагинов для Figma</p>
+              </a>
+            </li>
+            <li class="recommendations-list__item">
+              <a href="" class="recommendations-list__link">
+                <span class="tag tag--popular recommendations-list__tag">CSS</span>
+                <p class="recommendations-list__description">Возможности CSS Grid Layout , которые уже можно применять</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.recomendations -->
       </div>
       <!-- /.main-wrapper -->
     </div>
