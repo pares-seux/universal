@@ -29,3 +29,59 @@
       margin-left: 17px
       width: 65px
       height: 65px
+  &-list
+    padding-top: 30px
+    display: grid
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr)
+    grid-gap: 30px 29px
+.article
+  padding: 25px
+  background-color: $light
+  border-radius: 10px
+  overflow: hidden
+  &__title
+    margin-top: 0
+    margin-bottom: 5px
+    color: $title-color
+    font-family: $roboto
+    font-style: normal
+    font-weight: 700
+    font-size: 16px
+    line-height: 25px
+  &__text
+    height: 60px
+    font-family: $lato
+    font-style: normal
+    font-weight: 400
+    font-size: 14px
+    line-height: 20px
+    color: $text-color
+    margin-top: 0
+    margin-bottom: 10px
+  &--big
+    grid-column: span 2
+    grid-row: span 2
+  &--design
+    grid-row: span 2
+  &-tags
+    grid-row: span 2
+  &-minimal
+    grid-row: span 2
+  &-download
+    background-color: #3BBDC4
+    &__title
+      color: $light
+      margin-bottom: 10px
+    &__text
+      color: $light
+  &-socials
+    &__title
+      font-size: 20px
+      text-align: center
+      padding-bottom: 25px
+    &__block
+      max-width: 190px
+      margin: 0 auto
+    &__link
+      width: 50px
+      height: 50px
