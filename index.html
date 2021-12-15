@@ -67,7 +67,7 @@
   <section class="main">
     <div class="container">
       <div class="main-wrapper">
-        <div class="main-article article">
+        <div class="main-article">
           <img src="img/main-article.jpg" alt="Main article image" class="main-article__image">
           <div class="author main-article__author">
             <img src="img/author-avatar.png" alt="Avatar: David" class="avatar author__avatar">
@@ -141,56 +141,67 @@
         </ul>
       <!-- /.article-useful -->
       <div class="articles-list">
-        <div class="article article--big">
-          <span class="tag tag--javacsript">Статьи</span>
-          <h2 class="article__title article__title--big">Вам предложили работу мечты, но вы не можете...</h2>
-          <p class="article__text">
-            Как поступить, если хочется пойти на работу мечты, но она находится в другом городе. У вас семья и переезжать вы не
-            готовы.
-          </p>
-          <div class="article-author article-author--big">
-            <img src="img/inna-avatar.png" alt="Avatar: Inna" class="avatar article-author__avatar">
-            <span class="article-author__name">Инна Квашова:</span>
-            <p class="article-author__text">Каждый разработчик мечтает переехать в теплую страну</p>
+        <div class="article article-big">
+          <div class="article-big__content">
+            <div class="article-big__body">
+              <span class="tag tag--javacsript">Статьи</span>
+              <h2 class="article__title article__title--big article-big__title">Вам предложили работу мечты, но вы не можете...</h2>
+              <p class="article__text article__text--big">
+              Как поступить, если хочется пойти на работу мечты, но она находится в другом городе. У вас семья и переезжать вы не
+              готовы.
+              </p>
+            </div>
+            <img src="img/car.png" alt="Article picture" class="article-big__image">
+          </div>  
+          <div class="article__line"></div>
+          <div class="article-author article-big__author">
+            <img src="img/inna-avatar.png" alt="Avatar: Inna" class="avatar article-author__avatar article-big__avatar">
+            <span class="article-author__name article-big__name">Инна Квашова:</span>
+            <p class="article-big__text">Каждый разработчик мечтает переехать в теплую страну</p>
             <div class="counter article-author__counter">
-              <img src="img/icons/comment.png" alt="Icon: comment" class="counter__icon">
+              <img src="img/icons/comment.svg" alt="Icon: comment" class="counter__icon">
               <span class="counter__inc">342</span>
             </div>
           </div>
         </div>
         <!-- /.article -->
-        <div class="article article--design">
-          <span class="label">Популярное</span>
-          <span class="tag tag--pink">Web design</span>
-          <h2 class="article__title article__title--big">Где взять реальные проекты для портфолио</h2>
-          <div class="article-author article-author--design">
+        <div class="article article-design">
+          <img src="img/article-bg.jpg" alt="Article's background" class="article-design__background">
+          <span class="label article-design__label">Популярное</span>
+          <span class="tag tag--pink article-design__tag">Web design</span>
+          <h2 class="article__title article__title--design article-design__title">Где взять реальные проекты для портфолио</h2>
+          <div class="article-author article-design__author">
             <img src="img/inna-avatar.png" alt="Avatar: Sara" class="avatar article-author__avatar">
-            <span class="article-author__name">Сара Женникова</span>
-            <span class="date article-author__date">25 сентября</span>
-            <div class="counter article-author__counter">
-              <img src="img/icons/comment.png" alt="Icon: comment" class="counter__icon">
-              <span class="counter__inc">16</span>
-            </div>
-            <div class="counter article-author__counter">
-              <img src="img/icons/Heart.png" alt="Icon: like" class="counter__icon">
-              <span class="counter__inc">832</span>
+            <div class="avatar article-author__about">
+              <span class="article-author__name article-design__name">Сара Женникова</span>
+              <div class="info article-design__info">
+                <span class="date info__date article-design__date">25 сентября</span>
+                <div class="counter info__counter article-design__counter">
+                  <img src="img/icons/Comment_white.svg" alt="Icon: comment" class="counter__icon">
+                  <span class="counter__inc">16</span>
+                </div>
+                <div class="counter info__counter article-design__counter">
+                  <img src="img/icons/Heart_white.svg" alt="Icon: like" class="counter__icon">
+                  <span class="counter__inc">832</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <!-- /.article -->
         <div class="article article-download">
-          <h2 class="article__title article-download__title">Чек-лист сдачи верстки вашему заказчику</h2>
+          <h2 class="article__title article__title--middle article-download__title">Чек-лист сдачи верстки вашему заказчику</h2>
           <span class="article__text article-download__text">PDF, 125 Мб</span>
-          <br class="article__line ">
-          <a href="" class="article-link">
+          <div class="article__line article-download__line"></div>
+          <button class="article-download__button">
             <img src="img/icons/Download.png" alt="Icon: download" class="article-link__icon">
             Скачать
-          </a>
+          </button>
         </div>
         <!-- /.article -->
         <div class="article article-tags">
           <h2 class="article__title article-tags__title">Теги</h2>
-          <br class="article__line">
+          <div class="article__line"></div>
           <ul class="article-tags__list">
             <li class="article-tags__item"><a href="" class="article-tags__link">Forest</a></li>
             <li class="article-tags__item"><a href="" class="article-tags__link">Hover tag</a></li>
@@ -210,11 +221,11 @@
         <!-- /.article -->
         <div class="article article-minimal">
           <img src="img/article-img.png" alt="Article image" class="article-minimal__image">
-          <h2 class="article__title article-minimal__title">20+ инструментов для js-разработчикау</h2>
+          <h2 class="article__title article__title--middle article-minimal__title">20+ инструментов для&nbsp;js&#8209разработчика</h2>
         </div>
         <!-- /.article -->
         <div class="article">
-          <h2 class="article__title article__title--big">Удачные референсы</h2>
+          <h2 class="article__title ">Удачные референсы</h2>
           <p class="article__text">
             Как выбрать подходящие исходники, если вы ищите идею для интерфейса
           </p>
@@ -222,7 +233,7 @@
         </div>
         <!-- /.article -->
         <div class="article">
-          <h2 class="article__title article__title--big">Заказчики — мудаки?</h2>
+          <h2 class="article__title ">Заказчики — мудаки?</h2>
           <p class="article__text">
             Как защититься от бесконечных правок на этапе сдачи проекта
           </p>
@@ -230,15 +241,15 @@
         </div>
         <!-- /.article -->
         <div class="article">
-          <h2 class="article__title article__title--big">Работа без стресса — это...</h2>
+          <h2 class="article__title ">Работа без стресса — это быль или сказка</h2>
           <p class="article__text">
-            Обустройте свое рабочее место так, чтобы не испытывать раздражение от скрипучего...
+            Обустройте свое рабочее место так, чтобы не испытывать раздражение от скрипучего шума
           </p>
           <span class="date article__date">26 октября</span>
         </div>
         <!-- /.article -->
         <div class="article">
-          <h2 class="article__title article__title--big">Бесплатные методы...</h2>
+          <h2 class="article__title ">Бесплатные методы...</h2>
           <p class="article__text">
             Как не платить за софт, если у вас есть студенческий билет высшего учебного заведения
           </p>

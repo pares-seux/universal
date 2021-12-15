@@ -42,14 +42,42 @@
   &__title
     margin-top: 0
     margin-bottom: 5px
-    color: $title-color
+    color: $dark
     font-family: $roboto
     font-style: normal
     font-weight: 700
     font-size: 16px
     line-height: 25px
+    white-space: nowrap
+    display: inline-block
+    width: 213px
+    height: 25px
+    overflow: hidden
+    text-overflow: ellipsis
+    &--big
+      white-space: normal
+      display: -webkit-box
+      -webkit-line-clamp: 3
+      -webkit-box-orient: vertical
+      width: 238px
+      height: 90px
+    &--middle
+      white-space: normal
+      display: -webkit-box
+      -webkit-line-clamp: 2
+      -webkit-box-orient: vertical
+      width: 213px
+      height: 50px
+    &--design
+      white-space: normal
+      display: -webkit-box
+      -webkit-line-clamp: 3
+      -webkit-box-orient: vertical
+      width: 213px
+      height: 75px
   &__text
-    height: 60px
+    max-width: 213px
+    min-height: 60px
     font-family: $lato
     font-style: normal
     font-weight: 400
@@ -58,22 +86,196 @@
     color: $text-color
     margin-top: 0
     margin-bottom: 10px
-  &--big
+    text-decoration: none
+    overflow: hidden
+    text-overflow: ellipsis
+    display: -webkit-box
+    -webkit-line-clamp: 3
+    -webkit-box-orient: vertical
+    &--big
+      -webkit-line-clamp: 4
+      max-width: 230px
+  &__line
+    margin: 0 -25px
+    border-top: $pipe
+  &-author
+    display: flex
+    align-items: center
+    &__avatar
+      margin-right: 10px
+    &__about
+      flex-grow: 1
+    &__name
+      font-family: $lato
+      font-style: normal
+      font-weight: 400
+      font-size: 14px
+      line-height: 20px
+    &__text
+      margin: 0
+      font-family: $lato
+      font-style: normal
+      font-weight: 400
+      font-size: 14px
+      line-height: 20px
+      height: 20px
+      color: $text-color
+      max-width: 280px
+      overflow: hidden
+      text-overflow: ellipsis
+  &-big
     grid-column: span 2
     grid-row: span 2
-  &--design
+    padding-bottom: 13px
+    &__content
+      display: flex
+    &__body
+      padding: 9px 0 20px 10px
+    &__title
+      margin-top: 20px
+      margin-bottom: 25px
+      font-size: 25px
+      line-height: 30px
+    &__image
+      margin-top: -10px
+
+    &__author
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 17px 10px 0
+    &__avatar
+      width: 30px
+      height: 30px
+    &__name
+      font-weight: 900
+    &__text
+      font-family: $lato
+      font-style: normal
+      font-weight: 400
+      font-size: 14px
+      line-height: 20px
+      color: $text-color
+      margin: 0
+      max-width: 287px
+      height: 20px
+      white-space: nowrap
+      display: inline-block
+      overflow: hidden
+      text-overflow: ellipsis
+  &-design
     grid-row: span 2
+    position: relative
+    background: none
+    padding-top: 160px
+    &::before
+      content: ''
+      @include absolute
+      background: linear-gradient(0deg, rgba(64, 48, 61, 0.35), rgba(64, 48, 61, 0.35)), url(diego-ph-fIq0tET6llw-unsplash.jpg)
+      z-index: -1
+    &__background
+      @include absolute
+      z-index: -2
+    &__label
+      position: absolute
+      top: 19px
+      left: 25px
+    &__title
+      color: $light
+      letter-spacing: 0.5px
+      text-transform: uppercase
+      margin-top: 23px
+      margin-bottom: 30px
+    &__name
+      margin-bottom: 2px
+      color: $light
+      opacity: 0.85
+    &__date, &__counter
+      color: $light
+      opacity: 0.4
   &-tags
     grid-row: span 2
+    padding-bottom: 10px
+    &__title
+      letter-spacing: 0.5px
+      font-family: $lato
+      font-weight: 900
+      font-size: 14px
+      line-height: 20px
+      text-transform: uppercase
+      margin-bottom: 19px
+    &__list
+      display: flex
+      flex-wrap: wrap
+      padding: 0
+      margin: 25px 0 0
+      min-height: 265px
+      align-items: flex-start
+    &__item
+      list-style-type: none
+      margin-right: 10px
+    &__link
+      display: inline-block
+      border: $pipe
+      padding: 5px 15px 5px 14px
+      border-radius: 5px
+      font-family: $lato
+      font-style: normal
+      font-weight: 900
+      font-size: 14px
+      line-height: 20px
+      text-decoration: none
+      color: $dark
   &-minimal
     grid-row: span 2
+    position: relative
+    padding-top: 290px
+    &__image
+      @include absolute
+      bottom: 95px
+      max-height: 275px
+    &__title
+      font-weight: 700
+      margin-bottom: 0
   &-download
+    position: relative
     background-color: #3BBDC4
+    z-index: -2
+    padding-bottom: 13px
+    &::before
+      content: ''
+      background-image: url(../img/icons/File.png)
+      background-repeat: no-repeat
+      position: absolute
+      top: 20px
+      right: 10px
+      width: 80px
+      height: 80px
+      opacity: 0.5
+      z-index: -1
     &__title
       color: $light
       margin-bottom: 10px
+      z-index: 50
     &__text
       color: $light
+      min-height: 20px
+      margin-bottom: 19px
+    &__line
+      border-color: #96E2E3
+    &__button
+      width: 100%
+      border: none
+      background-color: transparent
+      padding-top: 12px
+      color: $light
+      font-family: $lato
+      font-style: normal
+      font-weight: 900
+      font-size: 14px
+      line-height: 20px
+      text-decoration: none
+      text-align: center
   &-socials
     &__title
       font-size: 20px
@@ -81,7 +283,7 @@
       padding-bottom: 25px
     &__block
       max-width: 190px
-      margin: 0 auto
+      margin: 20px auto 0
     &__link
       width: 50px
       height: 50px
