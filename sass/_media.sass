@@ -60,7 +60,6 @@
       align-items: center
       &__title
         margin-bottom: 0
-
       &__block
         width: 300px
         margin-right: 0
@@ -197,14 +196,14 @@
     padding-right: 15px
     &__text
       &--big
-        max-width: 310px
+        max-width: 60%
     &-big
       &__content
         margin-bottom: 35px
       &__image
-        left: 315px
+        left: 56%
       &__text
-        max-width: 290px
+        max-width: 310px
     &-design
       grid-row: 3 4
       padding-right: 35px
@@ -225,6 +224,12 @@
         border-top: $pipe
         &:not(&:last-child)
           border-right: none
+  .article
+    &-big
+      &__content
+        margin-bottom: 20px
+      &__text
+        max-width: 280px
 @media (max-width: 576px)
   .container
     width: 87%
@@ -255,20 +260,26 @@
       grid-gap: 30px 0
   .article
     grid-column: 1
-
+    &-author
+      &__about
+        max-width: 42%
     &__text
       max-width: 100%
+      &--big
+        max-width: 60%
     &--move
       grid-row: 6
     &-big
       grid-row: span 2
+      &__text
+        max-width: 45%
     &-design
       grid-row: 3 4
     &-download
       grid-row: 5
     &-tags
-      min-height: 90px
-      height: 100%
+      &__list
+        min-height: 145px
 @media (max-width: 485px)
   .main
     &-article
@@ -280,3 +291,51 @@
     &-useful
       &__item
         min-width: 200px
+  .article
+    &__text
+      &--big
+        max-width: 85%
+        margin-bottom: 35px
+    &-author
+      &__about
+        max-width: 50%
+    &-big
+      grid-row: span 3
+      &__content
+        padding: 220px 10px 0 0
+        margin-bottom: 15px
+      &__title
+        width: 75%
+        font-size: 22px
+        line-height: 26px
+        margin-top: 35px
+        margin-bottom: 15px
+      &__image
+        top: 0
+        left: 35%
+      &__author
+        flex-wrap: wrap
+        justify-content: space-between
+    &-design
+      grid-row: 4 5
+    &-download
+      grid-row: 6
+    &--move
+      grid-row: 7
+@media (max-width: 420px)
+  .article
+    &__title, &__text
+      &--big
+        width: 100%
+        margin-bottom: 20px
+    &-author
+      &__about
+        max-width: 65%
+    &-big
+      &__content
+        padding-top: 200px
+      &__image
+        left: 20%
+      &__text
+        order: 1
+        max-width: 100%
