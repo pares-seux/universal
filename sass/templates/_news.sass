@@ -6,21 +6,36 @@
         grid-gap: 29px
     &-list
         background-color: $light
+        padding-left: 25px
+        padding-right: 25px
         padding-bottom: 25px
         border-radius: 10px
         overflow: hidden
     &-item
         display: flex
-        padding: 25px 25px 0
+        padding-top: 25px
+
         &:not(&:last-child)
             padding-bottom: 24px
             border-bottom: $pipe
         &__image
-            width: 336px
-            height: 195px
+            min-width: 336px
+            max-height: 195px
             margin-right: 25px
             object-fit: cover
+        &__body
+            position: relative
+        &__flag
+            position: absolute
+            top: 1px
+            right: 3px
+        &__body
+            padding-top: 3px
+        &__content
+            min-height: 140px
         &__title
+            margin-top: 15px
+            margin-bottom: 10px
             font-family: $roboto
             font-style: normal
             font-weight: 700
@@ -34,6 +49,9 @@
             -webkit-box-orient: vertical
             color: $dark
         &__text
+            height: 60px
+            margin-top: 0
+            margin-bottom: 20px
             font-family: $lato
             font-style: normal
             font-weight: 400
@@ -48,3 +66,64 @@
             color: $text-color
         &__info
             max-width: 155px
+    &-actuals
+        height: min-content
+        padding-bottom: 0
+        &__h2
+            width: 100%
+            margin-top: 20px
+            margin-bottom: 19px
+            font-family: $lato
+            font-style: normal
+            font-weight: 900
+            font-size: 14px
+            line-height: 20px
+            text-transform: uppercase
+            letter-spacing: 0.5px
+            text-align: justify
+        &__item
+            display: flex
+            position: relative
+            padding-top: 16px
+            padding-bottom: 14.5px
+            align-items: center
+            border-bottom: $pipe
+            &:last-child
+                padding-bottom: 15px
+                border-bottom: none
+        &__body
+            padding-top: 1px
+        &__number
+            position: absolute
+            top: 20px
+            right: 5px
+        &__image
+            width: 60px
+            height: 60px
+            margin-right: 10px
+            object-fit: cover
+        &__title
+            margin-top: 0
+            margin-bottom: 4px
+            color: $text-color
+            font-family: $lato
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 20px
+        &__button
+            width: 100%
+            padding-top: 11px
+            padding-bottom: 14px
+            font-family: $lato
+            font-style: normal
+            font-weight: 900
+            font-size: 14px
+            line-height: 20px
+            color: $dark
+            border: none
+            background-color: $light
+            cursor: pointer
+.flag
+    &--active
+        filter: invert(71%) sepia(97%) saturate(5892%) hue-rotate(331deg) brightness(104%) contrast(95%)

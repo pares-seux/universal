@@ -18,6 +18,10 @@
       max-width: 746px
     &__title
       font-size: 32px
+  .news
+    &-item
+      &__image
+        min-width: 40%
 @media (max-width: 1040px)
   .container
     max-width: 860px
@@ -69,6 +73,18 @@
         width: 300px
         margin-right: 0
         margin-left: 0
+  .news
+    &-wrapper
+      grid-template-columns: 1fr
+    &-actuals
+      &__list
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-evenly
+      &__item
+        width: 30%
+        &--desktop-hidden
+          display: none
 @media (max-width: 990px)
   .container
     max-width: 800px
@@ -149,6 +165,14 @@
     &__title
       font-size: 28px
       line-height: 38px
+  .news
+    &-actuals
+      &__item
+        width: 45%
+        &--desktop-hidden
+          display: flex
+        &--tablet-hidden
+          display: none
 @media (max-width: 720px)
   .navbar
     &__button
@@ -300,6 +324,21 @@
     &__title
       font-size: 24px
       line-height: 34px
+  .news
+    &-item
+      flex-direction: column
+      &__image
+        width: 100%
+        margin-bottom: 25px
+    &-actuals
+      &__item
+        width: 100%
+        &--desktop-hidden
+          display: flex
+        &--tablet-hidden
+          display: flex
+        &--mobile-hidden
+          display: none
 @media (max-width: 485px)
   .main
     &-article
@@ -342,6 +381,15 @@
       grid-row: 6
     &--move
       grid-row: 7
+  .news
+    &-item
+      &__title
+        font-size: 18px
+        line-height: 22px
+      &__text
+        font-size: 14px
+        line-height: 18px
+        height: 55px
 @media (max-width: 420px)
   .article
     &__title, &__text
