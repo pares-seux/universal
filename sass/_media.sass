@@ -85,6 +85,19 @@
         width: 30%
         &--desktop-hidden
           display: none
+  .advices
+    &-wrapper
+      grid-template-columns: 2fr 1fr
+  .advice
+    &-slider
+      grid-column: span 2
+      max-width: 100%
+    &-big
+      max-height: 100%
+      grid-row: span 2
+      grid-column: 1
+      &::after
+        bottom: 35px
 @media (max-width: 990px)
   .container
     max-width: 800px
@@ -254,6 +267,14 @@
     &-socials
       grid-column: 2
       flex-direction: column
+  .advices
+    &-wrapper
+      grid-template-columns: 1fr 1fr
+  .advice
+    &-big
+      grid-column: span 2
+      &__title, &__text
+        max-width: 50%
 @media (max-width: 660px)
   .recommendations
     &-list
@@ -339,6 +360,23 @@
           display: flex
         &--mobile-hidden
           display: none
+  .advices
+    &-wrapper
+      grid-template-columns: 1fr
+  .advice
+    &-slider
+      grid-column: 1
+      &__title
+        font-size: 32px
+        line-height: 42px
+      &__item
+        padding-left: 35px
+        padding-right: 35px
+    &-big
+      &::after
+        right: 15px
+      &__text
+        width: 45%
 @media (max-width: 485px)
   .main
     &-article
@@ -390,6 +428,26 @@
         font-size: 14px
         line-height: 18px
         height: 55px
+  .advice
+    &-slider
+      &__title
+        font-size: 24px
+        line-height: 34px
+      &__item
+        padding-left: 20px
+        padding-right: 20px
+        padding-bottom: 135px
+    &-big
+      &::after
+        bottom: 7%
+        right: -20%
+      &__image
+        width: 75%
+        object-fit: cover
+      &__title
+        max-width: 65%
+      &__text
+        width: 65%
 @media (max-width: 420px)
   .article
     &__title, &__text
@@ -407,3 +465,16 @@
       &__text
         order: 1
         max-width: 100%
+    &-tags
+      &__list
+        min-height: 210px
+  .advice
+    &-big
+      &::after
+        right: -50%
+      &__image
+        width: 45%
+      &__title
+        max-width: 85%
+      &__text
+        width: 85%

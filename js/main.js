@@ -43,3 +43,17 @@ function hiddenNews(n, screen) {
       e.classList.toggle(className);
     });
 };
+
+const reviewSlider = new Swiper('.advice-slider', {
+  // Optional parameters
+  loop: true,
+  autoHeight: true,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
+  pagination: {
+    el: '.advice-slider__pagination',
+    type: 'bullets'
+  }
+});
