@@ -22,6 +22,9 @@
     &-item
       &__image
         min-width: 40%
+  .footer
+    &__list
+      width: 16.6%
 @media (max-width: 1040px)
   .container
     max-width: 860px
@@ -98,6 +101,13 @@
       grid-column: 1
       &::after
         bottom: 35px
+  .footer
+    &-menu
+      &__logo
+        margin-right: 0
+    &-about
+      &__text
+        width: 65%
 @media (max-width: 990px)
   .container
     max-width: 800px
@@ -141,6 +151,19 @@
       max-width: 75%
     &__title
       font-size: 28px
+  .footer
+    &__list
+      width: 33.3%
+      flex-shrink: 0
+    &-information
+      flex-wrap: wrap
+    &-menu
+      flex-wrap: wrap
+      &__list
+        margin-top: 15px
+        flex-basis: 1
+        order: 1
+        width: 100%
 @media (max-width: 820px)
   .container
     max-width: 680px
@@ -186,6 +209,7 @@
           display: flex
         &--tablet-hidden
           display: none
+
 @media (max-width: 720px)
   .navbar
     &__button
@@ -271,10 +295,17 @@
     &-wrapper
       grid-template-columns: 1fr 1fr
   .advice
+    &-slider
+      &__title
+        font-size: 36px
     &-big
       grid-column: span 2
       &__title, &__text
         max-width: 50%
+  .footer
+    &-subscription
+      &__title
+        font-size: 36px
 @media (max-width: 660px)
   .recommendations
     &-list
@@ -367,8 +398,8 @@
     &-slider
       grid-column: 1
       &__title
-        font-size: 32px
-        line-height: 42px
+        font-size: 30px
+        line-height: 40px
       &__item
         padding-left: 35px
         padding-right: 35px
@@ -377,6 +408,26 @@
         right: 15px
       &__text
         width: 45%
+  .footer
+    &__list
+      width: 50%
+    &-subscription
+      &__title
+        font-size: 30px
+        line-height: 40px
+      &__form
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+      &__input
+        flex-basis: 100%
+        margin-right: 0
+        margin-bottom: 15px
+    &-menu
+      &__list
+        flex-wrap: wrap
+      &__item
+        margin-right: 10px
 @media (max-width: 485px)
   .main
     &-article
@@ -432,7 +483,7 @@
     &-slider
       &__title
         font-size: 24px
-        line-height: 34px
+        line-height: 30px
       &__item
         padding-left: 20px
         padding-right: 20px
@@ -448,6 +499,13 @@
         max-width: 65%
       &__text
         width: 65%
+  .footer
+    &__list
+      width: 100%
+    &-subscription
+      &__title
+        font-size: 24px
+        line-height: 30px
 @media (max-width: 420px)
   .article
     &__title, &__text
