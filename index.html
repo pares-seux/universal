@@ -15,7 +15,7 @@
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <header class="navbar navbar-main navbar-main--mobile_fixed">
+  <header class="navbar navbar--mobile_fixed">
     <div class="container">
       <div class="navbar-container">
         <a href="" class="logo">
@@ -45,7 +45,7 @@
               <a href="" class="navbar-menu__link">Web Design</a>
             </li>
             <li class="navbar-menu__item navbar-menu__item--mobile-visible">
-              <button class="button navbar__button">
+              <button data-toggle="modal" class="button navbar__button">
                 Оставить заявку
               </button>
             </li>
@@ -57,7 +57,7 @@
           </button>
         </div>
         <!-- /.menu -->
-        <button class="button navbar__button navbar__button--mobile-hidden">
+        <button data-toggle="modal" class="button navbar__button navbar__button--mobile-hidden">
           Оставить заявку
         </button>
       </div>
@@ -290,7 +290,7 @@
               <span class="tag tag--news">Новости</span>
               <img src="img/icons/Bookmark.svg" alt="Icon: flag" class="flag news-item__flag">
               <div class="news-item__content">
-                <h2 class="news-item__title">Новый налоговый режим для фрилансеров — налог на проф. доход</h2>
+                <a href="article.html" class="news-item__title">Новый налоговый режим для фрилансеров — налог на проф. доход</a>
                 <p class="news-item__text">Руководитель налоговой заявил, что этот режим “поможет выйти из тени” тем, кто работает
                   неофициально. Разобрались, как
                   работает режим и кому он подходит, а кому нет.</p>
@@ -665,7 +665,7 @@
             <button class="footer-subscription__button button">
               Подписаться
             </button>
-            <div class="footer-subscription__label-container"></div>
+            <div class="footer-subscription__label"></div>
           </form>
         </div>
         <!-- /.footer-subscription -->
@@ -761,7 +761,33 @@
     </div>
     <!-- /.container -->
   </footer>
+  <div class="modal">
+    <div class="modal__overlay"></div>
+    <!-- /.modal__overlay -->
+    <div class="modal__dialog">
+      <a href="#" class="modal__close">
+        <img src="img/icons/close.svg" alt="Icon: close">
+      </a>
+      <div class="modal__container">
+        <form action="send.php" method="POST" class="form modal__form">
+          <input type="text" name="name" class="input modal__input" placeholder="Имя*" required minlength="2">
+          <input type="tel" name="phone" class="input modal__input" placeholder="Телефон*" required minlength="18"
+            data-mask="+7 (000) 000-00-00">
+          <input type="email" name="email" class="input modal__input" placeholder="Email*" required>
+          <textarea name="message" class="message modal__message" placeholder="Текст сообщения..."></textarea>
+          <button class="button modal__button" type="submit">Отправить</button>
+          <span class="modal__info">* Обязательные поля</span>
+        </form>
+      </div>
+      <!-- /.form-container -->
+    </div>
+    <!-- /.modal__dialog -->
+  </div>
+  <!-- /.modal -->
+  <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.mask.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

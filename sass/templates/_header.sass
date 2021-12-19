@@ -1,11 +1,16 @@
 .navbar
   background-color: $dark
+  &--light
+    background-color: $light
   &-container
     display: flex
     align-items: center
     justify-content: space-between
     padding-top: 13px
     padding-bottom: 13px
+    &--light
+      margin-left: 1px
+      margin-right: 3px
   &-menu
     list-style-type: none
     margin: 0
@@ -24,6 +29,8 @@
       font-weight: 900
       font-size: 14px
       line-height: 20px
+      &--light
+        color: #939699
   &__button
     width: 261px
     font-family: $lato

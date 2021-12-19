@@ -1,0 +1,76 @@
+.preview
+    position: relative
+    padding-top: 62px
+    padding-bottom: 72px
+    &::after
+        content: ''
+        @include absolute
+        background: linear-gradient(0deg, rgba(38, 45, 51, 0.75), rgba(38, 45, 51, 0.75))
+        z-index: -1
+    &__image
+        @include absolute
+        object-fit: cover
+        z-index: -2
+    &-wrapper
+        position: relative
+        padding-left: 97px
+        padding-right: 250px
+    &-menu
+        position: absolute
+        display: flex
+        justify-content: space-between
+        width: 292px
+        top: -2px
+        right: 97px
+        &__link
+            display: flex
+            align-content: center
+            justify-content: space-between
+            color: $light
+            text-decoration: none
+            font-family: $lato
+            font-style: normal
+            font-weight: 900
+            font-size: 14px
+            line-height: 20px
+            &--home
+                width: 101px
+                margin-right: 4px
+            &--prev
+                width: 65px
+            &--next
+                width: 75px
+    &__flag
+        position: absolute
+        width: 30px
+        height: 30px
+        top: 89px
+        left: 0
+    &__title
+        margin-top: 50px
+        margin-bottom: 30px
+        font-family: $roboto
+        font-style: normal
+        font-weight: 700
+        font-size: 55px
+        line-height: 70px
+        color: $light
+    &__text
+        font-family: $lato
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        line-height: 30px
+        color: $light
+        opacity: 0.85
+        max-width: 82%
+        margin-bottom: 43px
+    &__info
+        width: 223px
+    &__counter
+        color: $light
+        opacity: 0.85
+    &__date
+        margin-left: 5px
+        color: $light
+        opacity: 0.85
