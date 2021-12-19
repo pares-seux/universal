@@ -62,6 +62,20 @@ const reviewSlider = new Swiper('.advice-slider', {
   }
 });
 
+const cotentSlider = new Swiper('.content-slider', {
+  // Optional parameters
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.content-slider__button--next',
+    prevEl: '.content-slider__button--prev',
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
+});
+
 var modalButton = $('[data-toggle=modal]');
   modalButton.on('click', openModal);
   var closeModalButton = $('.modal__close');

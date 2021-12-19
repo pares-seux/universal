@@ -1,0 +1,139 @@
+.content
+    padding: 45px 0 60px
+    background-color: $light
+    &-wrapper
+        padding-left: 97px
+    &-article
+        &__text
+            margin: 15px 0
+            font-family: $lato
+            font-style: normal
+            font-weight: 400
+            font-size: 18px
+            line-height: 30px
+            color: $text-color
+            max-width: 60%
+        &__letter
+            font-family: $lato
+            font-size: 100px
+            line-height: 75px
+            color: $blue
+            float: left
+            margin-top: 6px
+            margin-right: 10px
+        &__title
+            margin: 45px 0 30px
+            font-family: $roboto
+            font-style: normal
+            font-weight: 700
+            font-size: 25px
+            line-height: 30px
+            color: $dark
+            max-width: 60%
+    &-blockquote
+        position: relative
+        z-index: 5
+        &__text
+            margin: 80px 0 45px
+            font-family: $roboto
+            font-style: normal
+            font-weight: 700
+            font-size: 25px
+            line-height: 30px
+            color: $dark
+            max-width: 60%
+        &__image
+            position: absolute
+            top: -20px
+            left: -20px
+            width: 70px
+            height: 70px
+            z-index: -1
+            opacity: 0.75
+    &__tags
+        margin-top: 50px
+        padding-bottom: 60px
+    &__sharing
+        max-width: 66%
+        border-top: $pipe
+    &-gallery
+        margin-left: -97px
+        margin-top: 60px
+        margin-bottom: 45px
+        border-radius: 10px
+        overflow: hidden
+        &__bottom
+            display: flex
+            justify-content: space-between
+            align-content: center
+            border: $pipe
+            border-top: none
+            border-bottom-left-radius: 10px
+            border-bottom-right-radius: 10px
+            overflow: hidden
+        &__description
+            font-family: $lato
+            font-style: normal
+            font-weight: 400
+            font-size: 14px
+            line-height: 20px
+            color: $dark
+            margin-left: 35px
+            margin-top: 25px
+            margin-bottom: 25px
+        &__author
+            width: 262px
+            padding-top: 12px
+            padding-bottom: 13px
+            padding-left: 30px
+            border-left: $pipe
+        &__name
+            color: $text-color
+        &__profession
+            color: #939699
+    &-slider
+        position: relative
+        &__button
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            z-index: 99
+            border: none
+            background-color: transparent
+            background-repeat: no-repeat
+            background-position: center
+            width: 90px
+            height: 90px
+            &--next
+                right: 35px
+                background-image: url('../img/icons/slider-arrow-next.png')
+            &--prev
+                left: 35px
+                background-image: url('../img/icons/slider-arrow-prev.png')
+.sharing
+    padding-top: 30px
+    &__title
+        margin-top: 0
+        margin-bottom: 25px
+        font-family: $roboto
+        font-style: normal
+        font-weight: 700
+        font-size: 25px
+        line-height: 30px
+        color: $dark
+    &-container
+        display: flex
+        justify-content: space-between
+        width: 420px
+    &__button
+        display: flex
+        align-content: center
+        justify-content: space-between
+        min-width: 130px
+    &__text
+        &--like
+            color: #FFC4C9
+        &--facebook
+            color: #BBC6FF
+        &--twitter
+            color: #C5E4FC
