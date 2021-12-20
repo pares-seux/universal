@@ -1,4 +1,16 @@
+
+
 $(document).ready(function () {
+
+  import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js';
+
+$.getScript("jquery.mask.js", function() {
+   alert("Script loaded but not necessarily executed.");
+});
+$.getScript("jquery.validate.min.js", function() {
+   alert("Script loaded but not necessarily executed.");
+});
+
   var menuButton = document.querySelector('.menu-button');
 menuButton.addEventListener('click', function() {
   document.querySelector('.navbar-menu').classList.toggle('navbar-menu--visible');
