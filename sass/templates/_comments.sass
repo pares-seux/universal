@@ -8,7 +8,8 @@
   &-header
     display: flex
     justify-content: space-between
-    align-items: end
+    align-items: center
+    flex-wrap: wrap
   &-title
     font-family: $roboto
     font-style: normal
@@ -27,8 +28,6 @@
     justify-content: center
     align-items: center
     border: $pipe
-    border-radius: 20px
-    padding: 10px 20px
     font-family: $lato
     font-style: normal
     font-weight: 900
@@ -40,6 +39,12 @@
     width: 100%
     &--short
       width: 228px
+      padding: 10px 20px
+      border-radius: 20px
+    &--load
+      margin-top: 8px
+      padding: 14px 0 14px 24px
+      border-radius: 22px
     &__icon
       margin-left: 0
       margin-right: 7px
@@ -52,19 +57,24 @@
     padding: 29px 0 0
     list-style-type: none
     &__answer
+      margin-top: -2px
       margin-left: -90px
+      margin-right: -40px
 .comment
   position: relative
-  padding-top: 20px
-  padding-left: 90px
-  padding-bottom: 29px
+  padding: 20px 40px 20px 90px
   border-top: $pipe
+  &--negative
+    padding-bottom: 28px
   &__avatar
     position: absolute
     width: 75px
     height: 75px
     left: 0px
-    top: 28px
+    top: 20px
+  &-info
+    display: flex
+    align-items: center
   &__author
     font-family: $roboto
     font-style: normal
@@ -75,7 +85,7 @@
     margin: 0 10px 0 0
   &__text
     margin-top: 10px
-    margin-bottom: 15px
+    margin-bottom: 12px
     font-family: $lato
     font-style: normal
     font-weight: 400
@@ -83,10 +93,12 @@
     line-height: 30px
     color: $text-color
   &__counter
+    margin-right: 15px
     color: $dark
   &-answer
     padding-left: 180px
-    padding-bottom: 0
+    padding-right: 0
+    padding-bottom: 8px
     &__avatar
       left: 90px
   &-form
@@ -95,14 +107,14 @@
       &::before
         content: ''
         position: absolute
-        top: 20px
+        top: 27px
         left: -20px
         border: 10px solid transparent
         border-right: 10px solid #D9DADB
       &::after
         content: ''
         position: absolute
-        top: 20px
+        top: 27px
         left: -20px
         border: 10px solid transparent
         border-right: 10px solid #D9DADB
@@ -111,7 +123,7 @@
         left: -19px
 .feedback
   position: relative
-  padding: 30px 40px 35px 126px
+  padding: 14px 40px 36px 126px
   background-color: #F5F5F5
   border-radius: 10px
   &__title
@@ -121,12 +133,12 @@
     font-size: 20px
     line-height: 25px
     color: $dark
+    margin-bottom: 15px
   &__author
     position: absolute
     top: 70px
     left: 30px
   &__message
-
     height: 130px
-    margin-bottom: 15px
+    margin-bottom: 10px
     resize: none

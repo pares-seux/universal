@@ -140,6 +140,9 @@
     max-width: 45%
     width: calc(50%-20px)
     width: 45%
+  .comments
+    &-wrapper
+      padding-right: 93px
 @media (max-width: 990px)
   .container
     max-width: 800px
@@ -242,6 +245,10 @@
       margin-bottom: 0
     &-content
       width: 55%
+  .comments
+    &-wrapper
+      padding-left: 0
+      padding-right: 0
 @media (max-width: 820px)
   .container
     max-width: 680px
@@ -622,6 +629,19 @@
     flex-grow: 1
     max-width: 100%
     width: 100%
+  .comment
+    padding-left: 55px
+    &__avatar
+      width: 45px
+      height: 45px
+    &-answer
+      padding-left: 150px
+  .feedback
+    padding-left: 95px
+    &__author
+      width: 45px
+      height: 45px
+      top: 100px
 @media (max-width: 485px)
   .main
     &-article
@@ -742,6 +762,26 @@
     &__image
       width: 80%
       margin-bottom: 15px
+  .comments
+    &-title
+      font-size: 30px
+      line-height: 40px
+  .comment
+    &-info
+      flex-wrap: wrap
+    &__author
+      flex-basis: 100%
+    &__text
+      font-size: 14px
+      line-height: 24px
+    &-form
+      &__message
+        &::after, &::before
+          display: none
+  .feedback
+    padding-left: 30px
+    &__author
+      display: none
 @media (max-width: 420px)
   .article
     &__title, &__text
