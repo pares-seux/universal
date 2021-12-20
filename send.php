@@ -37,7 +37,17 @@ try {
     //$mail->SMTPDebug = 2;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
+    // Настройки вашей почты
+    $mail->Host       = 'mail.hostland.ru'; // SMTP сервера вашей почты
+    $mail->Username   = 'universal@paresseux.ru'; // Логин на почте
+    $mail->Password   = 'S36l986x5P'; // Пароль на почте
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port       = 465;
+    $mail->setFrom('universal@paresseux.ru', 'Universal'); // Адрес самой почты и имя отправителя
 
+    // Получатель письма
+    $mail->addAddress('pares.seux@yandex.ru');  
+    //$mail->addAddress('youremail@gmail.com'); // Ещё один, если нужен
 
     // Прикрипление файлов к письму
 if (!empty($file['name'][0])) {

@@ -15,7 +15,7 @@
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <header class="navbar navbar--light navbar--mobile_fixed">
+  <header id="header" class="navbar navbar--light navbar--mobile_fixed">
     <div class="container">
       <div class="navbar-container navbar-container--light">
         <a href="index.html" class="logo">
@@ -24,25 +24,25 @@
         <div class="menu">
           <ul class="navbar-menu">
             <li class="navbar-menu__item">
-              <a href="" class="navbar-menu__link navbar-menu__link--light">Статьи</a>
+              <a href="#article" class="navbar-menu__link navbar-menu__link--light">Статьи</a>
             </li>
             <li class="navbar-menu__item">
-              <a href="" class="navbar-menu__link navbar-menu__link--light">Новости</a>
+              <a href="#recommendations" class="navbar-menu__link navbar-menu__link--light">Новости</a>
             </li>
             <li class="navbar-menu__item">
-              <a href="" class="navbar-menu__link navbar-menu__link--light">Горячее</a>
+              <a href="#recommendations" class="navbar-menu__link navbar-menu__link--light">Горячее</a>
             </li>
             <li class="navbar-menu__item">
-              <a href="" class="navbar-menu__link navbar-menu__link--light">HTML</a>
+              <a href="#footer" class="navbar-menu__link navbar-menu__link--light">HTML</a>
             </li>
             <li class="navbar-menu__item">
-              <a href="" class="navbar-menu__link navbar-menu__link--light">CSS</a>
+              <a href="#footer" class="navbar-menu__link navbar-menu__link--light">CSS</a>
             </li>
             <li class="navbar-menu__item">
-              <a href="" class="navbar-menu__link navbar-menu__link--light">JavaScript</a>
+              <a href="#footer" class="navbar-menu__link navbar-menu__link--light">JavaScript</a>
             </li>
             <li class="navbar-menu__item">
-              <a href="" class="navbar-menu__link navbar-menu__link--light">Web Design</a>
+              <a href="#footer" class="navbar-menu__link navbar-menu__link--light">Web Design</a>
             </li>
             <li class="navbar-menu__item navbar-menu__item--mobile-visible">
               <button data-toggle="modal" class="button navbar__button navbar__button">
@@ -65,7 +65,7 @@
     </div>
     <!-- /.container -->
   </header>
-  <section class="preview">
+  <section id="main" class="preview">
     <div class="container">
       <img src="img/news_1.png" alt="News image" class="preview__image">
       <div class="preview-wrapper">
@@ -75,11 +75,11 @@
             <img src="img/icons/Home.svg" alt="Icon: home" class="preview-menu__image">
             На главную
           </a>
-          <a href="" class="preview-menu__link preview-menu__link--prev">
+          <a href="404.html" class="preview-menu__link preview-menu__link--prev">
             <img src="img/icons/Arrow-prev.svg" alt="Icon: arrow prev" class="preview-menu__image">
             Назад
           </a>
-          <a href="" class="preview-menu__link preview-menu__link--next">
+          <a href="404.html" class="preview-menu__link preview-menu__link--next">
             Вперед 
             <img src="img/icons/Arrow.svg" alt="Icon: arrow next" class="preview-menu__image">
           </a>
@@ -110,7 +110,7 @@
     </div>
     <!-- /.container -->
   </section>
-  <section class="content">
+  <section id="article" class="content">
     <div class="container">
       <div class="content-wrapper">
         <div class="content-article">
@@ -189,26 +189,26 @@
         </div>
         <!-- /.content-article -->
         <ul class="content__tags tagblock">
-          <li class="tagblock__item"><a href="" class="tagblock__link">Travel</a></li>
-          <li class="tagblock__item"><a href="" class="tagblock__link">Destinations</a></li>
-          <li class="tagblock__item"><a href="" class="tagblock__link">Nature</a></li>
-          <li class="tagblock__item"><a href="" class="tagblock__link">World</a></li>
-          <li class="tagblock__item"><a href="" class="tagblock__link">Alaska</a></li>
+          <li class="tagblock__item"><a href="index.html" class="tagblock__link">Travel</a></li>
+          <li class="tagblock__item"><a href="index.html" class="tagblock__link">Destinations</a></li>
+          <li class="tagblock__item"><a href="index.html" class="tagblock__link">Nature</a></li>
+          <li class="tagblock__item"><a href="index.html" class="tagblock__link">World</a></li>
+          <li class="tagblock__item"><a href="index.html" class="tagblock__link">Alaska</a></li>
         </ul>
         <div class="sharing content__sharing">
           <h2 class="sharing__title">Поддержите репостом</h2>
           <div class="sharing-container">
-            <a class="button sharing__button sharing__button--like">
+            <a href="#" class="button sharing__button sharing__button--like">
               <img src="img/icons/Heart_white.svg" alt="Icon: arrow" class="button__icon sharing__icon">
               Like it
               <span class="sharing__text sharing__text--like">42</span>
             </a>
-            <a class="button sharing__button sharing__button--facebook">
+            <a href="https://facebook.com/" class="button sharing__button sharing__button--facebook" target="_blank">
               <img src="img/icons/Facebook.png" alt="Icon: arrow" class="button__icon sharing__icon">
               Share
               <span class="sharing__text sharing__text--facebook">80</span>
             </a>
-            <a class="button sharing__button sharing__button--twitter">
+            <a href="https://twitter.com/" class="button sharing__button sharing__button--twitter target="_blank">
               <img src="img/icons/Twitter.png" alt="Icon: arrow" class="button__icon sharing__icon">
               Tweet
               <span class="sharing__text sharing__text--twitter">33</span>
@@ -228,7 +228,7 @@
           <!-- /.author -->
           <div class="line"></div>
           <div class="content-author__bottom">
-            <a href="" class="content-author__link">Страница автора</a>
+            <a href="404.html" class="content-author__link">Страница автора</a>
           </div>
         </div>
         <!-- /.content-author -->
@@ -237,7 +237,7 @@
               <h2 class="card-title card-title__main">Материал по теме</h2>
               <img src="img/card.png" alt="Card's image" class="card__image">
             <div class="card-content">
-              <a href="" class="card-title card-title__subtitle">20+ инструментов для&nbsp;js&#8209;разработчика</a>
+              <a href="404.html" class="card-title card-title__subtitle">20+ инструментов для&nbsp;js&#8209;разработчика</a>
               <p class="card__content">Узнайте, какими инструментами вы еще не пользовались, а могли бы. Эти инструменты помогут вам ускорить свою работу или
               повысить ее качество. Все инструменты собраны в виде...</p>
               <div class="info info--secondary">
@@ -259,12 +259,12 @@
     </div>
     <!-- /.container -->
   </section>
-  <section class="recommendations">
+  <section id="recomendations" class="recommendations">
     <div class="container">
       <div class="recommendations-wrapper">
         <div class="recommendation">
           <img src="img/recommendation-1.png" alt="" class="recommendation__image">
-          <a href="" class="recommendation__link">Техника работы по помидоркам — это как?</a>
+          <a href="404.html" class="recommendation__link">Техника работы по помидоркам — это как?</a>
           <div class="info info--secondary">
             <div class="counter info__counter info__counter--secondary">
               <img src="img/icons/Eye.svg" alt="Icon: like" class="counter__icon">
@@ -279,7 +279,7 @@
         <!-- /.recommendation -->
         <div class="recommendation">
           <img src="img/recommendation-2.png" alt="" class="recommendation__image">
-          <a href="" class="recommendation__link">Вопросы на собеседовании для джуна</a>
+          <a href="404.html" class="recommendation__link">Вопросы на собеседовании для джуна</a>
           <div class="info info--secondary">
             <div class="counter info__counter info__counter--secondary">
               <img src="img/icons/Eye.svg" alt="Icon: like" class="counter__icon">
@@ -294,7 +294,7 @@
         <!-- /.recommendation -->
         <div class="recommendation">
           <img src="img/recommendation-3.png" alt="" class="recommendation__image">
-          <a href="" class="recommendation__link">Список стран, куда можно улететь</a>
+          <a href="404.html" class="recommendation__link">Список стран, куда можно улететь</a>
           <div class="info info--secondary">
             <div class="counter info__counter info__counter--secondary">
               <img src="img/icons/Eye.svg" alt="Icon: like" class="counter__icon">
@@ -309,7 +309,7 @@
         <!-- /.recommendation -->
         <div class="recommendation">
           <img src="img/recommendation-4.png" alt="" class="recommendation__image">
-          <a href="" class="recommendation__link">В вашем портфолио могут быть фейковые работы</a>
+          <a href="404.html" class="recommendation__link">В вашем портфолио могут быть фейковые работы</a>
           <div class=" info info--secondary">
             <div class="counter info__counter info__counter--secondary">
               <img src="img/icons/Eye.svg" alt="Icon: like" class="counter__icon">
@@ -326,12 +326,12 @@
     </div>
     <!-- /.container -->
   </section>
-  <section class="comments">
+  <section id="feedback" class="comments">
     <div class="container">
       <div class="comments-wrapper">
         <div class="comments-header">
           <h2 class="comments-title">Комментарии<span class="comments-title__counter">19</span></h2>
-          <a href="" class="comments-button comments-button--short">
+          <a href="#comment" class="comments-button comments-button--short">
             <img src="img/icons/Pencil.svg" alt="Icon: comment"
               class="button__icon comments-button__icon comments-button__icon--short">
             Добавить комментарий
@@ -448,7 +448,7 @@
             загрузить еще
           </button>
         </div>
-        <div class="feedback">
+        <div id="comment" class="feedback">
           <h2 class="feedback__title">Что вы думаете на этот счет?</h2>
           <img src="img/feedback-avatar.png" alt="" class="avatar feedback__author">
           <form action="" class="comments-form">
@@ -465,7 +465,7 @@
     </div>
     <!-- /.container -->
   </section>
-  <footer class="footer">
+  <footer id="footer" class="footer">
     <div class="container">
       <div class="footer-wrapper">
         <div class="footer-subscription">
@@ -484,10 +484,10 @@
           <div class="footer__list footer__list--news">
             <h3 class="footer__title">Новости</h3>
             <ul class="footer__ul">
-              <li class="footer__item"><a class="footer__link" href="#">Обновления</a></li>
-              <li class="footer__item"><a class="footer__link" href="#">Экспресс</a></li>
-              <li class="footer__item"><a class="footer__link" href="#">Politics</a></li>
-              <li class="footer__item"><a class="footer__link" href="#">Solar Eclipse</a></li>
+              <li class="footer__item"><a href="#footer" class="footer__link">Обновления</a></li>
+              <li class="footer__item"><a href="#footer" class="footer__link">Экспресс</a></li>
+              <li class="footer__item"><a href="#footer" class="footer__link">Politics</a></li>
+              <li class="footer__item"><a href="#footer" class="footer__link">Solar Eclipse</a></li>
             </ul>
           </div>
           <!-- ./footer__list -->
@@ -513,46 +513,46 @@
           <div class="footer__list footer__list--courses">
             <h3 class="footer__title">Курсы</h3>
             <ul class="footer__ul">
-              <li class="footer__item"><a class="footer__link" href="#">Платные интенсивы</a></li>
-              <li class="footer__item"><a class="footer__link" href="#">Бесплатные стримы</a></li>
-              <li class="footer__item"><a class="footer__link" href="#">Мастер-классы</a></li>
-              <li class="footer__item"><a class="footer__link" href="#">Менторство</a></li>
-              <li class="footer__item"><a class="footer__link" href="#">Буткемпы</a></li>
+              <li class="footer__item"><a class="footer__link" href="#footer">Платные интенсивы</a></li>
+              <li class="footer__item"><a class="footer__link" href="#footer">Бесплатные стримы</a></li>
+              <li class="footer__item"><a class="footer__link" href="#footer">Мастер-классы</a></li>
+              <li class="footer__item"><a class="footer__link" href="#footer">Менторство</a></li>
+              <li class="footer__item"><a class="footer__link" href="#footer">Буткемпы</a></li>
             </ul>
           </div>
           <!-- ./footer__list -->
           <div class="footer__list footer__list--info">
             <h3 class="footer__title">Информация</h3>
             <ul class="footer__ul">
-              <li class="footer__item"><a class="footer__link" href="#">Политика данных</a></li>
-              <li class="footer__item"><a class="footer__link" href="#">Оферта сайта</a></li>
-              <li class="footer__item"><a class="footer__link" href="#">Реквизиты</a></li>
-              <li class="footer__item"><a class="footer__link" href="#">Контакты</a></li>
+              <li class="footer__item"><a class="footer__link" href="#footer">Политика данных</a></li>
+              <li class="footer__item"><a class="footer__link" href="#footer">Оферта сайта</a></li>
+              <li class="footer__item"><a class="footer__link" href="#footer">Реквизиты</a></li>
+              <li class="footer__item"><a class="footer__link" href="#footer">Контакты</a></li>
             </ul>
           </div>
           <!-- ./footer__list -->
           <div class="footer__list footer__list--categories">
             <h3 class="footer__title">Категории</h3>
             <ul class="footer__ul">
-              <li class="footer__item"><a class="footer__link" href="#">Популярное</a></li>
-              <li class="footer__item"><a class="footer__link" href="#">Горячее</a></li>
-              <li class="footer__item"><a class="footer__link" href="#">Подборки</a></li>
-              <li class="footer__item"><a class="footer__link" href="#">Мнения</a></li>
-              <li class="footer__item"><a class="footer__link" href="#">Карьера</a></li>
+              <li class="footer__item"><a class="footer__link" href="index.html#main">Популярное</a></li>
+              <li class="footer__item"><a class="footer__link" href="index.html#hot">Горячее</a></li>
+              <li class="footer__item"><a class="footer__link" href="index.html#articles">Подборки</a></li>
+              <li class="footer__item"><a class="footer__link" href="index.html#research">Мнения</a></li>
+              <li class="footer__item"><a class="footer__link" href="index.html#hot">Карьера</a></li>
             </ul>
           </div>
           <!-- ./footer__list -->
         </div>
         <!-- /.footer-information -->
         <div class="footer-menu">
-          <a href="index.html" class="logo footer-menu__logo">
+          <a href="#header" class="logo footer-menu__logo">
             <img src="img/footer-logo.png" alt="Logo: Universal" class="logo__image">
           </a>
           <ul class="footer-menu__list">
-            <li class="footer-menu__item"><a href="" class="footer-menu__link">Контакты</a></li>
-            <li class="footer-menu__item"><a href="" class="footer-menu__link">Работа у нас</a></li>
-            <li class="footer-menu__item"><a href="" class="footer-menu__link">Реклама</a></li>
-            <li class="footer-menu__item"><a href="" class="footer-menu__link">Обратная связь</a></li>
+            <li class="footer-menu__item"><a href="#footer" class="footer-menu__link">Контакты</a></li>
+            <li class="footer-menu__item"><a href="#footer" class="footer-menu__link">Работа у нас</a></li>
+            <li class="footer-menu__item"><a href="#footer" class="footer-menu__link">Реклама</a></li>
+            <li class="footer-menu__item"><a href="#footer" class="footer-menu__link">Обратная связь</a></li>
           </ul>
           <div class="socials footer-menu__socials">
             <a href="https://facebook.com/" class="socials__link socials__link--facebook footer-menu__social" target="_blank"></a>
@@ -595,7 +595,9 @@
     <!-- /.modal__dialog -->
   </div>
   <!-- /.modal -->
+  <a href="#header" class="scrollup"><img src="img/icons/Arrow.svg" alt="Icon: arrow" class="scrollup__icon"></a>
   <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

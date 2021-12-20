@@ -450,6 +450,8 @@
     &__tag
       margin-top: 15px
       margin-left: 45px
+  .information
+    padding-top: 100px
 @media (max-width: 660px)
   .recommendations
     &-list
@@ -642,6 +644,10 @@
       width: 45px
       height: 45px
       top: 100px
+  .imformation
+    &__title
+      font-size: 30px
+      line-height: 40px
 @media (max-width: 485px)
   .main
     &-article
@@ -752,8 +758,6 @@
       &__text
         font-size: 14px
         line-height: 24px
-    &-blockquote
-      &__title
   .card
     &-container
       flex-direction: column
@@ -782,6 +786,14 @@
     padding-left: 30px
     &__author
       display: none
+  .information
+    &__title
+      font-size: 24px
+      line-height: 30px
+    &__button
+      display: inline-block
+      padding-left: 45px
+      text-align: center
 @media (max-width: 420px)
   .article
     &__title, &__text
@@ -812,3 +824,97 @@
         max-width: 85%
       &__text
         width: 85%
+@media (min-width: 992px)
+  .logo
+    &:hover
+      transform: scale(1.05)
+  .button
+    &:hover
+      background-color: darken($blue, 30%)
+      transform: scale(1.05)
+  .advice
+    &__button
+      &:hover
+        background-color: darken($blue, 30%)
+        transform: scale(1.05)
+  .navbar
+    &-menu
+      &__link
+        &:hover
+          color: darken($light, 20%)
+          text-decoration: underline
+  .articles
+    &-useful
+      &__link
+        &:hover
+          color: darken($light, 20%)
+          text-decoration: underline
+  .tagblock
+    &__item
+      &:hover
+        background-color: darken($light, 5%)
+        transform: scale(1.02)
+  .socials
+    &__link
+      &:hover
+        transform: scale(1.03)
+  .news
+    &-actuals
+      &__button
+        &:hover
+          color: darken($light, 20%)
+          text-decoration: underline
+  .footer
+    &__link
+      &:hover
+        color: darken($text-color, 20%)
+        text-decoration: underline
+    &-menu
+      &__link
+        &:hover
+          color: darken($dark, 20%)
+          text-decoration: underline
+  .preview
+    &-menu
+      &__link
+        &:hover
+          color: darken($light, 30%)
+  .content
+    &-author
+      &__link
+        &:hover
+          color: darken($dark, 20%)
+          text-decoration: underline
+    &-slider
+      &__button
+        &:hover
+          background-color: darken($light, 20%)
+          opacity: 0.5
+          border-radius: 50%
+  .comments
+    &-button
+      &:hover
+        background-color: darken($light, 5%)
+        transform: scale(1.02)
+  .counter
+    &__button
+      &:hover
+        transform: scale(1.02)
+  .recommendation
+    &__link
+      &:hover
+        color: darken($dark, 20%)
+        text-decoration: underline
+  .card
+    &-title
+      &:hover
+        color: darken($dark, 20%)
+        text-decoration: underline
+  .scrollup
+    &:hover
+      background-color: darken($text-color, 20%)
+  .modal
+    &__close
+      &:hover
+        color: darken($light, 20%)
+        transform: scale(1.05)

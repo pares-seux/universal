@@ -1,8 +1,4 @@
-
-
 $(document).ready(function () {
-
-  import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js';
 
 $.getScript("jquery.mask.js", function() {
    alert("Script loaded but not necessarily executed.");
