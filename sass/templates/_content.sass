@@ -2,25 +2,28 @@
     padding: 45px 0 60px
     background-color: $light
     &-wrapper
-        padding-left: 97px
+        position: relative
+        padding-left: 95px
     &-article
         &__text
-            margin: 15px 0
+            margin-bottom: 30px
             font-family: $lato
             font-style: normal
             font-weight: 400
             font-size: 18px
             line-height: 30px
             color: $text-color
-            max-width: 60%
+            max-width: 59%
         &__letter
             font-family: $lato
             font-size: 100px
+            font-weight: 900
             line-height: 75px
             color: $blue
             float: left
             margin-top: 6px
-            margin-right: 10px
+            margin-left: -5px
+            margin-right: 11px
         &__title
             margin: 45px 0 30px
             font-family: $roboto
@@ -29,7 +32,7 @@
             font-size: 25px
             line-height: 30px
             color: $dark
-            max-width: 60%
+            max-width: 58%
     &-blockquote
         position: relative
         z-index: 5
@@ -41,7 +44,7 @@
             font-size: 25px
             line-height: 30px
             color: $dark
-            max-width: 60%
+            max-width: 58%
         &__image
             position: absolute
             top: -20px
@@ -51,15 +54,17 @@
             z-index: -1
             opacity: 0.75
     &__tags
-        margin-top: 50px
-        padding-bottom: 60px
+        margin-top: 44px
+        padding-bottom: 43px
     &__sharing
+        margin-left: 1px
         max-width: 66%
         border-top: $pipe
     &-gallery
         margin-left: -97px
         margin-top: 60px
         margin-bottom: 45px
+        max-width: 1140px
         border-radius: 10px
         overflow: hidden
         &__bottom
@@ -70,6 +75,7 @@
             border-top: none
             border-bottom-left-radius: 10px
             border-bottom-right-radius: 10px
+            margin-top: -5px
             overflow: hidden
         &__description
             font-family: $lato
@@ -78,14 +84,10 @@
             font-size: 14px
             line-height: 20px
             color: $dark
-            margin-left: 35px
-            margin-top: 25px
-            margin-bottom: 25px
+            margin: 25px 35px
         &__author
             width: 262px
-            padding-top: 12px
-            padding-bottom: 13px
-            padding-left: 30px
+            padding: 12px 30px 13px 30px
             border-left: $pipe
         &__name
             color: $text-color
@@ -105,11 +107,68 @@
             width: 90px
             height: 90px
             &--next
-                right: 35px
+                right: 21px
                 background-image: url('../img/icons/slider-arrow-next.png')
+                background-size: cover
             &--prev
-                left: 35px
+                left: 20px
                 background-image: url('../img/icons/slider-arrow-prev.png')
+                background-size: cover
+    &-slide
+        object-fit: cover
+    &-author
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-content: center
+        position: absolute
+        right: 99px
+        top: -161px
+        width: 263px
+        height: 296px
+        border: $pipe
+        border-radius: 10px
+        background-color: $light
+        padding: 35px 25px 0
+        &__author
+            flex-direction: column
+            justify-content: space-between
+            min-height: 210px
+            padding-bottom: 20px
+        &__avatar
+            width: 90px
+            height: 90px
+            margin: 0
+        &__text
+            text-align: center
+        &__name
+            margin-bottom: 5px
+            font-family: $roboto
+            font-style: normal
+            font-weight: 700
+            font-size: 20px
+            line-height: 25px
+            color: $dark
+        &__profession
+            font-size: 14px
+            line-height: 20px
+            color: $text-color
+        &__bottom
+            padding-top: 15px
+            padding-bottom: 15px
+            text-align: center
+        &__works, &__link
+            font-family: $lato
+            font-style: normal
+            font-weight: 900
+            font-size: 14px
+            line-height: 20px
+            color: $dark
+            text-decoration: none
+    &__card
+        position: absolute
+        right: 98px
+        top: 1690px
 .sharing
     padding-top: 30px
     &__title
@@ -129,7 +188,7 @@
         display: flex
         align-content: center
         justify-content: space-between
-        min-width: 130px
+        min-width: 131px
     &__text
         &--like
             color: #FFC4C9
@@ -137,3 +196,37 @@
             color: #BBC6FF
         &--twitter
             color: #C5E4FC
+.card
+    width: 263px
+    &-title
+        font-family: $roboto
+        font-style: normal
+        font-weight: 700
+        line-height: 25px
+        color: $dark
+        &__main
+            font-size: 20px
+            margin-top: 0
+            margin-bottom: 20px
+        &__subtitle
+            font-size: 16px
+            margin: 0
+            text-decoration: none
+    &__image
+        margin-bottom: 12px
+        border-radius: 10px
+        object-fit: cover
+    &__content
+        margin-top: 5px
+        margin-bottom: 20px
+        font-family: $lato
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        line-height: 20px
+        color: $text-color
+    &__info
+        justify-content: flex-start
+
+    &__counter
+        margin-right: 10px

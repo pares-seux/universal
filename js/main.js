@@ -65,6 +65,10 @@ const reviewSlider = new Swiper('.advice-slider', {
 const cotentSlider = new Swiper('.content-slider', {
   // Optional parameters
   loop: true,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
   // Navigation arrows
   navigation: {
     nextEl: '.content-slider__button--next',
