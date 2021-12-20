@@ -1,0 +1,132 @@
+.comments
+  padding-top: 90px
+  padding-bottom: 30px
+  background-color: $light
+  &-wrapper
+    padding-left: 97px
+    padding-right: 293px
+  &-header
+    display: flex
+    justify-content: space-between
+    align-items: end
+  &-title
+    font-family: $roboto
+    font-style: normal
+    font-weight: 700
+    font-size: 40px
+    line-height: 50px
+    color: $dark
+    margin: 0
+    &__counter
+      margin-left: 10px
+      font-family: $lato
+      font-weight: 400
+      color: #939699
+  &-button
+    display: flex
+    justify-content: center
+    align-items: center
+    border: $pipe
+    border-radius: 20px
+    padding: 10px 20px
+    font-family: $lato
+    font-style: normal
+    font-weight: 900
+    font-size: 14px
+    line-height: 20px
+    color: $dark
+    text-decoration: none
+    background-color: $light
+    width: 100%
+    &--short
+      width: 228px
+    &__icon
+      margin-left: 0
+      margin-right: 7px
+      &--short
+        margin-right: 10px
+  &-block
+    padding-bottom: 60px
+  &-list
+    margin: 0
+    padding: 29px 0 0
+    list-style-type: none
+    &__answer
+      margin-left: -90px
+.comment
+  position: relative
+  padding-top: 20px
+  padding-left: 90px
+  padding-bottom: 29px
+  border-top: $pipe
+  &__avatar
+    position: absolute
+    width: 75px
+    height: 75px
+    left: 0px
+    top: 28px
+  &__author
+    font-family: $roboto
+    font-style: normal
+    font-weight: 700
+    font-size: 16px
+    line-height: 25px
+    color: $dark
+    margin: 0 10px 0 0
+  &__text
+    margin-top: 10px
+    margin-bottom: 15px
+    font-family: $lato
+    font-style: normal
+    font-weight: 400
+    font-size: 18px
+    line-height: 30px
+    color: $text-color
+  &__counter
+    color: $dark
+  &-answer
+    padding-left: 180px
+    padding-bottom: 0
+    &__avatar
+      left: 90px
+  &-form
+    &__message
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        top: 20px
+        left: -20px
+        border: 10px solid transparent
+        border-right: 10px solid #D9DADB
+      &::after
+        content: ''
+        position: absolute
+        top: 20px
+        left: -20px
+        border: 10px solid transparent
+        border-right: 10px solid #D9DADB
+      &::after
+        border-right: 10px solid white
+        left: -19px
+.feedback
+  position: relative
+  padding: 30px 40px 35px 126px
+  background-color: #F5F5F5
+  border-radius: 10px
+  &__title
+    font-family: $roboto
+    font-style: normal
+    font-weight: 700
+    font-size: 20px
+    line-height: 25px
+    color: $dark
+  &__author
+    position: absolute
+    top: 70px
+    left: 30px
+  &__message
+
+    height: 130px
+    margin-bottom: 15px
+    resize: none

@@ -31,6 +31,8 @@
     &__card
       right: 37px
       top: 1800px
+  .recommendation
+    width: 24%
 @media (max-width: 1040px)
   .container
     max-width: 860px
@@ -126,6 +128,18 @@
     &__card
       right: 0
       top: 2000px
+  .recommendations
+    &-wrapper
+      flex-wrap: wrap
+      max-width: calc(100%+20px)
+      margin: -10px
+  .recommendation
+    margin: 10px
+    flex-grow: 1
+    max-width: calc(50%-20px)
+    max-width: 45%
+    width: calc(50%-20px)
+    width: 45%
 @media (max-width: 990px)
   .container
     max-width: 800px
@@ -450,6 +464,7 @@
       width: 70%
   .card
     width: 100%
+
 @media (max-width: 576px)
   .container
     width: 87%
@@ -597,7 +612,16 @@
       flex-wrap: wrap
       width: 100%
       grid-gap: 10px
-
+  .recommendations
+    &-wrapper
+      flex-wrap: wrap
+      max-width: 100%
+      margin: 0
+  .recommendation
+    margin: 15px 0 0
+    flex-grow: 1
+    max-width: 100%
+    width: 100%
 @media (max-width: 485px)
   .main
     &-article
