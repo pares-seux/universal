@@ -45,7 +45,7 @@
               <a href="#footer" class="navbar-menu__link">Web Design</a>
             </li>
             <li class="navbar-menu__item navbar-menu__item--mobile-visible">
-              <button data-toggle="modal" class="button navbar__button">
+              <button data-toggle="modal" class="button navbar__button navbar__button--mobile-visible">
                 Оставить заявку
               </button>
             </li>
@@ -78,55 +78,102 @@
             </div>
           </div>
           <!-- /.author -->
-          <div class="main-article__description">
-            <span class="tag tag--news main-article__tag">Javascript</span>
-            <h1 class="main-article__title">Расширение Chrome защищает от атак</h1>
-            <a href="article.html" class="button main-article__button">
-              Читать далее
-              <img src="img/icons/Arrow.svg" alt="Icon: arrow" class="button__icon">
-            </a>
-          </div>
-          <!-- /.main-article__description -->
+          <ul class="main-article__list">
+            <li id="tab-default" class="main-article__description main-article__description--active">
+              <span class="tag tag--news main-article__tag">Javascript</span>
+              <h1 class="main-article__title">Расширение Chrome защищает от атак</h1>
+              <a href="article.html" class="button main-article__button">
+                Читать далее
+                <img src="img/icons/Arrow.svg" alt="Icon: arrow" class="button__icon">
+              </a>
+            </li>
+            <!-- /.main-article__description -->
+            <li id="tab-1" class="main-article__description">
+              <span class="tag tag--opinion main-article__tag">CSS</span>
+              <h1 class="main-article__title">Как использовать CSS float после того, как вышел Flexbox</h1>
+              <a href="article.html" class="button main-article__button">
+                Читать далее
+                <img src="img/icons/Arrow.svg" alt="Icon: arrow" class="button__icon">
+              </a>
+            </li>
+            <!-- /.main-article__description -->
+            <li id="tab-2" class="main-article__description">
+              <span class="tag tag--javascript main-article__tag">Javascript</span>
+              <h1 class="main-article__title">На каком стандарте писать скрипты, если я фрилансер</h1>
+              <a href="article.html" class="button main-article__button">
+                Читать далее
+                <img src="img/icons/Arrow.svg" alt="Icon: arrow" class="button__icon">
+              </a>
+            </li>
+            <!-- /.main-article__description -->
+            <li id="tab-3" class="main-article__description">
+              <span class="tag tag--collection main-article__tag">HTML</span>
+              <h1 class="main-article__title">Правильно вставляем картинку на сайт для Retina дисплея</h1>
+              <a href="article.html" class="button main-article__button">
+                Читать далее
+                <img src="img/icons/Arrow.svg" alt="Icon: arrow" class="button__icon">
+              </a>
+            </li>
+            <!-- /.main-article__description -->
+            <li id="tab-4" class="main-article__description">
+              <span class="tag tag--design main-article__tag">Web design</span>
+              <h1 class="main-article__title">ТОП-10 плагинов для Figma</h1>
+              <a href="article.html" class="button main-article__button">
+                Читать далее
+                <img src="img/icons/Arrow.svg" alt="Icon: arrow" class="button__icon">
+              </a>
+            </li>
+            <!-- /.main-article__description -->
+            <li id="tab-5" class="main-article__description">
+              <span class="tag tag--popular main-article__tag">CSS</span>
+              <h1 class="main-article__title">Возможности CSS Grid Layout, которые уже можно применять</h1>
+              <a href="article.html" class="button main-article__button">
+                Читать далее
+                <img src="img/icons/Arrow.svg" alt="Icon: arrow" class="button__icon">
+              </a>
+            </li>
+            <!-- /.main-article__description -->
+          </ul>
         </div>
         <!-- /.main-article -->
-        <div class="recommendations main__recommendations">
-          <h3 class="recommendations__title">
+        <div class="recommend main__recommend">
+          <h3 class="recommend__title">
             Рекомендуем
           </h3>
-          <ul class="recommendations-list">
-            <li class="recommendations-list__item">
-              <a href="" class="recommendations-list__link">
-                <span class="tag tag--opinion recommendations-list__tag">CSS</span>
-                <p class="recommendations-list__description">Как использовать CSS float после того, как вышел Flexbox</p>
-              </a>
+          <ul class="recommend-list">
+            <li data-target="#tab-1" class="recommend-list__item recommend-list__item--active">
+              <div class="recommend-list__link">
+                <span class="tag tag--opinion recommend-list__tag">CSS</span>
+                <p class="recommend-list__description">Как использовать CSS float после того, как вышел Flexbox</p>
+              </div>
             </li>
-            <li class="recommendations-list__item">
-              <a href="" class="recommendations-list__link">
-                <span class="tag tag--javascript recommendations-list__tag">Javascript</span>
-                <p class="recommendations-list__description">На каком стандарте писать скрипты, если я фрилансер</p>
-              </a>
+            <li data-target="#tab-2" class="recommend-list__item">
+              <div class="recommend-list__link">
+                <span class="tag tag--javascript recommend-list__tag">Javascript</span>
+                <p class="recommend-list__description">На каком стандарте писать скрипты, если я фрилансер</p>
+              </div>
             </li>
-            <li class="recommendations-list__item">
-              <a href="" class="recommendations-list__link">
-                <span class="tag tag--collection recommendations-list__tag">HTML</span>
-                <p class="recommendations-list__description">Правильно вставляем картинку на сайт для Retina дисплея</p>
-              </a>
+            <li data-target="#tab-3" class="recommend-list__item">
+              <div class="recommend-list__link">
+                <span class="tag tag--collection recommend-list__tag">HTML</span>
+                <p class="recommend-list__description">Правильно вставляем картинку на сайт для Retina дисплея</p>
+              </div>
             </li>
-            <li class="recommendations-list__item">
-              <a href="" class="recommendations-list__link">
-                <span class="tag tag--design recommendations-list__tag">Web design</span>
-                <p class="recommendations-list__description">ТОП-10 плагинов для Figma</p>
-              </a>
+            <li data-target="#tab-4" class="recommend-list__item">
+              <div class="recommend-list__link">
+                <span class="tag tag--design recommend-list__tag">Web design</span>
+                <p class="recommend-list__description">ТОП-10 плагинов для Figma</p>
+              </div>
             </li>
-            <li class="recommendations-list__item">
-              <a href="" class="recommendations-list__link">
-                <span class="tag tag--popular recommendations-list__tag">CSS</span>
-                <p class="recommendations-list__description">Возможности CSS Grid Layout, которые уже можно применять</p>
-              </a>
+            <li data-target="#tab-5" class="recommend-list__item">
+              <div class="recommend-list__link">
+                <span class="tag tag--popular recommend-list__tag">CSS</span>
+                <p class="recommend-list__description">Возможности CSS Grid Layout, которые уже можно применять</p>
+              </div>
             </li>
           </ul>
         </div>
-        <!-- /.recomendations -->
+        <!-- /.recomend -->
       </div>
       <!-- /.main-wrapper -->
     </div>
@@ -516,7 +563,7 @@
   <section id="hot" class="advices">
     <div class="container">
       <div class="advices-wrapper">
-        <div class="advice-slider">
+        <div class="advice-slider swiper-container">
           <div class="swiper-wrapper advice-wrapper">
             <div class="swiper-slide advice-slider__item">
               <img src="img/advices-slider-2.jpg" alt="" class="advice-slider__image">
@@ -734,7 +781,7 @@
         </div>
         <!-- /.footer-information -->
         <div class="footer-menu">
-          <a href="#header" class="logo footer-menu__logo">
+          <a href="#main" class="logo footer-menu__logo">
             <img src="img/footer-logo.png" alt="Logo: Universal" class="logo__image">
           </a>
           <ul class="footer-menu__list">
@@ -771,10 +818,27 @@
       <div class="modal__container">
         <h2 class="modal__title">Обратная связь</h2>
         <form action="send.php" method="POST" class="form modal__form">
-          <input type="text" name="name" class="input modal__input" placeholder="Имя*" required minlength="2">
-          <input type="email" name="email" class="input modal__input" placeholder="Email*" required>
+          <label for="theame" class="modal__label">Тема</label>
+          <select name="theame" id="theame" class="input modal__select" required>
+            <option value="" disabled  selected>Выберите тему</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Design">Web Design</option>
+            <option value="News">Новости</option>
+          </select>
+          <div class="modal-error__select"></div>
+          <label for="theame" class="modal__label">Сообщение</label>
           <textarea name="message" class="message modal__message" placeholder="Текст сообщения..."></textarea>
+          <label for="theame" class="modal__label">Email</label>
           <input type="email" name="email" class="input modal__input" placeholder="Email*" required>
+          <div class="modal-error"></div>
+          <div class="modal-checkbox">
+            <label for="checkbox" class="modal-checkbox__label">Согласен с обработкой данных</label>
+            <input type="checkbox" name="checkbox" class="modal-checkbox__button" required>
+            
+          </div>
+          <div class="modal-error__checkbox"></div>
           <button class="button modal__button" type="submit">Отправить</button>
         </form>
       </div>
@@ -783,9 +847,13 @@
     <!-- /.modal__dialog -->
   </div>
   <!-- /.modal -->
-  <a href="#header" class="scrollup"><img src="img/icons/Arrow.svg" alt="Icon: arrow" class="scrollup__icon"></a>
+  <a href="#main" class="scrollup"><img src="img/icons/Arrow.svg" alt="Icon: arrow" class="scrollup__icon"></a>
   <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.mask.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/parallax.js"></script>
+  <script src="js/js-scripts.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

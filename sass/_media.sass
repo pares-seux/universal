@@ -159,10 +159,10 @@
         margin-bottom: 55px
       &__title
         margin-bottom: 35px
-    &__recommendations
+    &__recommend
       grid-row: 2
       grid-column: span 2
-  .recommendations
+  .recommend
     &-list
       display: flex
       &__item
@@ -201,8 +201,8 @@
         width: 100%
   .modal
     &__dialog
-      padding-left: 66px
-      padding-right: 66px
+      padding-left: 22px
+      padding-right: 22px
       &__form
         left: 66px
         right: 66px
@@ -346,7 +346,7 @@
       margin-right: 47px
     &-menu
       position: fixed
-      top: 70px
+      top: 50px
       left: 0
       right: 0
       bottom: 0
@@ -390,7 +390,7 @@
       padding-right: 55px
       &__title
         font-size: 36px
-  .recomendations
+  .recomend
     &-list
       &__item
         padding: 10px
@@ -453,7 +453,7 @@
   .information
     padding-top: 100px
 @media (max-width: 660px)
-  .recommendations
+  .recommend
     &-list
       flex-direction: column
       &__item
@@ -485,6 +485,8 @@
     &__button
       &--mobile-hidden
         display: none
+      &--mobile-visible
+        margin-right: 0
   .main
     &-article
       &__title

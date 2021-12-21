@@ -22,6 +22,14 @@
     justify-content: space-between
     z-index: 1
     padding: 55px 224px 100px 55px
+    &__list
+      margin: 0
+      padding: 0
+      text-decoration: none
+    &__description
+      display: none
+      &--active
+        display: block
     &__image
       @include absolute
       z-index: -1
@@ -36,7 +44,7 @@
       margin: 20px 0 50px
     &__button
       display: inline-block
-  &__recommendations
+  &__recommend
     grid-column: 2
 .author
   display: flex
@@ -58,7 +66,7 @@
     font-size: 12px
     line-height: 15px
     opacity: 0.4
-.recommendations
+.recommend
   background-color: $light
   padding-bottom: 10px
   &__title
@@ -79,6 +87,9 @@
       padding: 16px 25px 18px 25px
       min-height: 100px
       border-top: $pipe
+      cursor: pointer
+      &--active
+        background-color: darken($light, 20%)
     &__link
       text-decoration: none
     &__tag

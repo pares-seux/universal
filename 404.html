@@ -154,7 +154,7 @@
         </div>
         <!-- /.footer-information -->
         <div class="footer-menu">
-          <a href="#header" class="logo footer-menu__logo">
+          <a href="#main" class="logo footer-menu__logo">
             <img src="img/footer-logo.png" alt="Logo: Universal" class="logo__image">
           </a>
           <ul class="footer-menu__list">
@@ -196,10 +196,27 @@
       <div class="modal__container">
         <h2 class="modal__title">Обратная связь</h2>
         <form action="send.php" method="POST" class="form modal__form">
-          <input type="text" name="name" class="input modal__input" placeholder="Имя*" required minlength="2">
-          <input type="email" name="email" class="input modal__input" placeholder="Email*" required>
+          <label for="theame" class="modal__label">Тема</label>
+          <select name="theame" id="theame" class="input modal__select" required>
+            <option value="" disabled selected>Выберите тему</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Design">Web Design</option>
+            <option value="News">Новости</option>
+          </select>
+          <div class="modal-error__select"></div>
+          <label for="theame" class="modal__label">Сообщение</label>
           <textarea name="message" class="message modal__message" placeholder="Текст сообщения..."></textarea>
+          <label for="theame" class="modal__label">Email</label>
           <input type="email" name="email" class="input modal__input" placeholder="Email*" required>
+          <div class="modal-error"></div>
+          <div class="modal-checkbox">
+            <label for="checkbox" class="modal-checkbox__label">Согласен с обработкой данных</label>
+            <input type="checkbox" name="checkbox" class="modal-checkbox__button" required>
+  
+          </div>
+          <div class="modal-error__checkbox"></div>
           <button class="button modal__button" type="submit">Отправить</button>
         </form>
       </div>
@@ -208,9 +225,11 @@
     <!-- /.modal__dialog -->
   </div>
   <!-- /.modal -->
-  <a href="#header" class="scrollup"><img src="img/icons/Arrow.svg" alt="Icon: arrow" class="scrollup__icon"></a>
+  <a href="#main" class="scrollup"><img src="img/icons/Arrow.svg" alt="Icon: arrow" class="scrollup__icon"></a>
   <script src="js/jquery-3.6.0.min.js"></script>
-  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/jquery.mask.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/js-scripts.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

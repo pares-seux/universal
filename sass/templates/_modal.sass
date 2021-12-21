@@ -5,7 +5,7 @@
     top: 0
     right: 0
     bottom: 0
-    background-color: rgba(0, 143, 223, 0.39)
+    background: rgba(40, 47, 54, 0.8)
     z-index: 100
     visibility: hidden
     opacity: 0
@@ -15,16 +15,16 @@
       opacity: 1
   &__dialog
     position: fixed
-    width: 478px
+    width: 360px
     min-height: auto
     max-height: 90%
-    padding: 33px 88px 0 88px
-    border-bottom: 33px solid $dark
+    padding: 30px 35px 0 35px
+    border-bottom: 40px solid $light
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
-    background-color: $dark
-    color: $light
+    background-color: $light
+    color: $dark
     border-radius: 10px
     z-index: 101
     visibility: hidden
@@ -38,37 +38,73 @@
       opacity: 1
   &__title
     margin-top: 0
-    text-align: center
+    margin-bottom: 10px
+    font-family: $roboto
+    font-style: normal
     font-weight: 700
-    font-size: 18px
-    line-height: 23px
-    text-transform: uppercase
+    font-size: 20px
+    line-height: 25px
   &__form
     display: flex
     align-items: center
     justify-content: space-between
     flex-wrap: wrap
-
   &__close
     position: absolute
-    top: 17px
-    right: 18px
+    top: 15px
+    right: 15px
     text-decoration: none
+  &__label
+    font-family: $lato-bold
+    font-style: normal
+    font-weight: 900
+    font-size: 14px
+    line-height: 20px
+    margin-top: 15px
   &__input
     width: 100%
-    margin-top: 15px
+    margin-top: 5px
     font-size: 12px
     line-height: 15px
   &__message
     width: 100%
-    min-height: 123px
+    min-height: 120px
+    margin-top: 5px
+  &__select
+    width: 100%
+    margin-top: 5px
+  &-checkbox
+    display: flex
+    align-items: center
+    flex-wrap: wrap
     margin-top: 15px
+    margin-bottom: 30px
+    &__button
+      margin: 0 10px 0 0
+      background: #4592FF
+      border-radius: 3px
+      width: 20px
+      height: 20px
+      border: $pipe
+      order: -1
+    &__label
+      font-family: $lato
+      font-style: normal
+      font-weight: 400
+      font-size: 14px
+      line-height: 20px
+      color: $text-color
+
   &__button
-    margin-top: 15px
-    width: 45%
+    width: 122px
   &__info
     font-weight: 700
     font-size: 12px
     line-height: 15px
     color: $light
     opacity: 0.8
+  &-error
+    &__select
+    &__checkbox
+      flex-basis: 100%
+      order: 1
