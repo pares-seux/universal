@@ -234,10 +234,10 @@
         <!-- /.content-author -->
         <div class="card content__card">
           <div class="card-container">
-              <h2 class="card-title card-title__main">Материал по теме</h2>
+              <h2 class="card-title card-title--main">Материал по теме</h2>
               <img src="img/card.png" alt="Card's image" class="card__image">
             <div class="card-content">
-              <a href="404.html" class="card-title card-title__subtitle">20+ инструментов для&nbsp;js&#8209;разработчика</a>
+              <a href="404.html" class="card-title card-title--subtitle">20+ инструментов для&nbsp;js&#8209;разработчика</a>
               <p class="card__content">Узнайте, какими инструментами вы еще не пользовались, а могли бы. Эти инструменты помогут вам ускорить свою работу или
               повысить ее качество. Все инструменты собраны в виде...</p>
               <div class="info info--secondary">
@@ -333,7 +333,7 @@
           <h2 class="comments-title">Комментарии<span class="comments-title__counter">19</span></h2>
           <a href="#comment" class="comments-button comments-button--short">
             <img src="img/icons/Pencil.svg" alt="Icon: comment"
-              class="button__icon comments-button__icon comments-button__icon--short">
+              class="comments-button__icon comments-button__icon--short">
             Добавить комментарий
           </a>
         </div>
@@ -550,14 +550,14 @@
             </li>
           </ul>
           <button class="comments-button comments-button--load">
-            <img src="img/icons/Loading.svg" alt="Icon: comment" class="button__icon comments-button__icon">
+            <img src="img/icons/Loading.svg" alt="Icon: comment" class="comments-button__icon">
             загрузить еще
           </button>
         </div>
         <div id="comment" class="feedback">
           <h2 class="feedback__title">Что вы думаете на этот счет?</h2>
           <img src="img/feedback-avatar.png" alt="" class="avatar feedback__author">
-          <form action="send.php" method="POST" class="comments-form">
+          <form action="send.php" method="POST" class="comment-form">
             <div class="comment-form__message">
               <textarea name="message" class="message feedback__message" minlength = "100" required></textarea>
             </div>
@@ -697,18 +697,15 @@
             <option value="Design">Web Design</option>
             <option value="News">Новости</option>
           </select>
-          <div class="modal-error__select"></div>
           <label for="theame" class="modal__label">Сообщение</label>
           <textarea name="message" class="message modal__message" placeholder="Текст сообщения..."></textarea>
           <label for="theame" class="modal__label">Email</label>
           <input type="email" name="email" class="input modal__input" placeholder="Email*" required>
           <div class="modal-error"></div>
           <div class="modal-checkbox">
-            <label for="checkbox" class="modal-checkbox__label">Согласен с обработкой данных</label>
+            <label class="modal-checkbox__label">Согласен с обработкой данных</label>
             <input type="checkbox" name="checkbox" class="modal-checkbox__button" required>
-  
           </div>
-          <div class="modal-error__checkbox"></div>
           <button class="button modal__button" type="submit">Отправить</button>
         </form>
       </div>
