@@ -196,7 +196,7 @@
       flex-wrap: wrap
       &__list
         margin-top: 15px
-        flex-basis: 1
+
         order: 1
         width: 100%
   .modal
@@ -241,7 +241,8 @@
       &__main
         flex-basis: 100%
     &__image
-      width: 40%
+      max-width: 65%
+      flex-basis: 100%
       margin-bottom: 0
     &-content
       width: 55%
@@ -473,7 +474,8 @@
       width: 70%
   .card
     width: 100%
-
+    &__image
+      max-width: 80%
 @media (max-width: 576px)
   .container
     width: 87%
@@ -861,6 +863,11 @@
       &:hover
         transform: scale(1.03)
   .news
+    &-item
+      &__title
+        &:hover
+          color: darken($light, 20%)
+          text-decoration: underline
     &-actuals
       &__button
         &:hover

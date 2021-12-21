@@ -30,6 +30,43 @@ var modalButton = $('[data-toggle=modal]');
     modalDialog.removeClass('modal__dialog--visible');
   };
 
+const reviewSlider = new Swiper('.advice-slider', {
+  // Optional parameters
+  loop: true,
+  autoHeight: true,
+  
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
+  pagination: {
+    el: '.advice-slider__pagination',
+    type: 'bullets'
+  },
+  autoplay: {
+    delay: 4000,
+  }
+});
+
+const cotentSlider = new Swiper('.content-slider', {
+  // Optional parameters
+  loop: true,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.content-slider__button--next',
+    prevEl: '.content-slider__button--prev',
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
+});
+
+
   //обработка форм
   $(".form").each( function() {
     if($(this).hasClass('footer-subscription__form')) {
@@ -59,27 +96,36 @@ var modalButton = $('[data-toggle=modal]');
         },
     });
     };
-    $(this).validate({
-      messages: {
-        message: {
-          required: 'Оставьте сообщение*',
-          minlength:  'Сообщение не должно быть короче 100 символов'
+    if($(this).hasClass('comment-form')) {
+      $(this).validate({
+        messages: {
+         message: {
+            required: 'Оставьте сообщение*',
+            minlength:  'Сообщение не должно быть короче 100 символов'
+          },
         },
-      },
-    });
+      });
+    };
   });
 
-  $(document).ready(function() {
-    var tabsItem = $(".recommend-list__item");
-    var contentItem = $(".main-article__description");
-    tabsItem.on("click", function() {
+  var tabsItem = $(".recommend-list__item");
+  var contentItem = $(".main-article__description");
+  tabsItem.on("click", function() {
       var activeContent = $(this).attr("data-target");
       tabsItem.removeClass('recommend-list__item--active');
       contentItem.removeClass('main-article__description--active');
       $(this).addClass('recommend-list__item--active');
       $(activeContent).addClass('main-article__description--active');
       
-    });
+  });
+
+  $(".scroll").on("click", function() {
+    var destination = $(this).attr("href");
+    console.log(destination);
+    jQuery("html:not(:animated),body:not(:animated)").animate({
+      scrollTop: $(destination).offset().top
+    }, 1200);
+			return false;
   });
 
 });

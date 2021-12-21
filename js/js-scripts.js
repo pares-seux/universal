@@ -26,38 +26,3 @@ showComments.addEventListener('click', function() {
   };
 }, {passive: true})
 
-const reviewSlider = new Swiper('.advice-slider', {
-  // Optional parameters
-  loop: true,
-  autoHeight: true,
-  
-  keyboard: {
-    enabled: true,
-    onlyInViewport: false,
-  },
-  pagination: {
-    el: '.advice-slider__pagination',
-    type: 'bullets'
-  },
-  autoplay: {
-    delay: 4000,
-  }
-});
-
-const cotentSlider = new Swiper('.content-slider', {
-  // Optional parameters
-  loop: true,
-  keyboard: {
-    enabled: true,
-    onlyInViewport: false,
-  },
-  // Navigation arrows
-  navigation: {
-    nextEl: '.content-slider__button--next',
-    prevEl: '.content-slider__button--prev',
-  },
-  keyboard: {
-    enabled: true,
-    onlyInViewport: false,
-  },
-});
