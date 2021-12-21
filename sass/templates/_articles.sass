@@ -227,9 +227,9 @@
   &-download
     position: relative
     background-color: #3BBDC4
-    z-index: -2
+    z-index: 1
     padding-bottom: 13px
-    &::before
+    &::after
       content: ''
       background-image: url(../img/icons/File.png)
       background-repeat: no-repeat
@@ -239,7 +239,7 @@
       width: 80px
       height: 80px
       opacity: 0.5
-      z-index: -1
+      z-index: 2
     &__title
       color: $light
       margin-bottom: 10px

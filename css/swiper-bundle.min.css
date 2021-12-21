@@ -33,7 +33,7 @@
 }
 .swiper-wrapper {
   position: relative;
-  max-width: 100%;
+  max-width: 555px;
   height: 100%;
   z-index: 1;
   display: flex;

@@ -34,7 +34,9 @@ const reviewSlider = new Swiper('.advice-slider', {
   // Optional parameters
   loop: true,
   autoHeight: true,
-  
+  slidesPerView: 1,
+slidesPerColumn: 1,
+  spaceBetween: 0,
   keyboard: {
     enabled: true,
     onlyInViewport: false,
