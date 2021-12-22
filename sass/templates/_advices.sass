@@ -2,8 +2,12 @@
     background-color: $dark
     padding: 60px 0
     &-wrapper
+        display: flex
+        justify-content: space-between
+    &__list
         display: grid
-        grid-template: 370px 170px / 1fr 263px 263px
+        margin-left: 30px
+        grid-template-column: repeat(2, 1fr)
         grid-gap: 30px
 .advice
     &-slider
@@ -71,7 +75,7 @@
         grid-column: span 2
         background-color: #B4D1E0
         padding: 32px 307px 50px 35px
-
+        z-index: 0
         &::after
             content: ''
             width: 260px
@@ -79,14 +83,15 @@
             background-color: #d1e2eb
             border-radius: 50%
             position: absolute
-            right: 30px
+            left: 50%
             bottom: 45px
-            z-index: -1
+            z-index: -2
         &__title
             font-size: 25px
             line-height: 30px
             margin-top: 20px
             margin-bottom: 15px
+
         &__text
             padding-bottom: 46px
         &__image
@@ -94,10 +99,10 @@
             top: 0
             right: 0
             bottom: 0
+            left: 291px
             height: 100%
-            z-index: 5
+            z-index: -1
     &__button
         margin-left: 3px
         padding-bottom: 12px
         padding-right: 22px
-        z-index: 50

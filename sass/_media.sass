@@ -22,6 +22,9 @@
     &-item
       &__image
         min-width: 40%
+  .advice
+    &-big
+      padding-right: 100px
   .footer
     &__list
       width: 16.6%
@@ -98,15 +101,19 @@
           display: none
   .advices
     &-wrapper
-      grid-template-columns: 2fr 1fr
+      flex-wrap: wrap
+    &__list
+      flex-basis: 100%
+      grid-template-columns: repeat( 3, 1fr )
+      margin-top: 30px
+      margin-left: 0
   .advice
     &-slider
-      grid-column: span 2
+      flex-basis: 100%
       max-width: 100%
     &-big
-      max-height: 100%
+      grid-column: span 2
       grid-row: span 2
-      grid-column: 1
       &::after
         bottom: 35px
   .footer
@@ -436,7 +443,10 @@
     &-big
       grid-column: span 2
       &__title, &__text
-        max-width: 50%
+        max-width: 70%
+
+      &__image
+        left: 70%
   .footer
     &-subscription
       &__title
@@ -548,7 +558,7 @@
         &--mobile-hidden
           display: none
   .advices
-    &-wrapper
+    &__list
       grid-template-columns: 1fr
   .advice
     &-slider
@@ -823,7 +833,7 @@
       &::after
         right: -50%
       &__image
-        width: 45%
+        left: 90%
       &__title
         max-width: 85%
       &__text
