@@ -1,114 +1,63 @@
+
 $(document).ready(function () {
 
-var modalButton = $('[data-toggle=modal]');
-  modalButton.on('click', openModal);
-  var closeModalButton = $('.modal__close');
-  closeModalButton.on('click', closeModal);
-  var modalWindow = $('.modal__overlay');
-  modalWindow.on('click', function(event) {
-    closeModal(event);
-  });
-
-  $(document).keyup(function(event) {
-     if (event.key === "Escape") { 
-       closeModal(event);
-    }
-  });
-
-  function openModal() {
-    var modalOverlay = $('.modal__overlay');
-    var modalDialog = $('.modal__dialog');
-    modalOverlay.addClass('modal__overlay--visible');
-    modalDialog.addClass('modal__dialog--visible');
-  };
-
-  function closeModal(event) {
-    event.preventDefault();
-    var modalOverlay = $('.modal__overlay');
-    var modalDialog = $('.modal__dialog');
-    modalOverlay.removeClass('modal__overlay--visible');
-    modalDialog.removeClass('modal__dialog--visible');
-  };
-
-const reviewSlider = new Swiper('.advice-slider', {
+  $.getScript("./js/jquery.mask.js", function(){});
+  $.getScript("./js/jquery.validate.min.js", function(){});
+  $.getScript("./js/swiper-bundle.min.js", function(){
+    const reviewSlider = new Swiper('.advice-slider', {
   // Optional parameters
   loop: true,
-  autoHeight: true,
-  slidesPerView: 1,
-slidesPerColumn: 1,
-  spaceBetween: 0,
   keyboard: {
     enabled: true,
     onlyInViewport: false,
   },
   pagination: {
     el: '.advice-slider__pagination',
-    type: 'bullets'
+    type: 'bullets',
+    clickable: true,
   },
   autoplay: {
     delay: 4000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
   }
 });
-
-const cotentSlider = new Swiper('.content-slider', {
-  // Optional parameters
-  loop: true,
-  keyboard: {
-    enabled: true,
-    onlyInViewport: false,
-  },
-  // Navigation arrows
-  navigation: {
-    nextEl: '.content-slider__button--next',
-    prevEl: '.content-slider__button--prev',
-  },
-  keyboard: {
-    enabled: true,
-    onlyInViewport: false,
-  },
-});
-
-
-  //обработка форм
-  $(".form").each( function() {
-    if($(this).hasClass('footer-subscription__form')) {
-      $(this).validate({
-        errorLabelContainer: $('.footer-subscription__label'),
-        messages: {
-          email: {
-            required: 'Обязательное поле*',
-            email: 'Пожалуйста, введите корректный email-адрес'
-          },
-        },
-    });
-    };
-    if($(this).hasClass('modal__form')) {
-      $(this).validate({
-        messages: {
-          email: {
-            required: 'Обязательное поле*',
-            email: 'Пожалуйста, введите корректный email-адрес'
-          },
-          checkbox: {
-            required: 'Обязательное поле*',
-          },
-          theame: {
-            required: '',
-          }
-        },
-    });
-    };
-    if($(this).hasClass('comment-form')) {
-      $(this).validate({
-        messages: {
-         message: {
-            required: 'Оставьте сообщение*',
-            minlength:  'Сообщение не должно быть короче 100 символов'
-          },
-        },
-      });
-    };
   });
+  $.getScript("./js/common.js", function(){});
+  
+  const research = document.getElementsByClassName('research__parallax')[0];
+  function moveBg(e){
+    var researchHeight = research.getBoundingClientRect().height;
+    var heightScroll = window.innerHeight + researchHeight - 60;
+    var researchTop = research.getBoundingClientRect().top;
+    var blockPosition = researchTop + researchHeight - 60;
+    if ((researchTop-window.innerHeight<=0) && (researchTop+researchHeight>=0)) {
+      research.style.backgroundPositionY = ((80-0.8*100) + (blockPosition/heightScroll)*100*0.8) + '%'; 
+    }
+  };
+  document.addEventListener('scroll', moveBg);
+
+  var newsShow = document.querySelector('.news-actuals__button');
+  newsShow.addEventListener('click', function() {
+    var width = window.innerWidth;
+    if ((width <= 1040) && (width > 820))   {
+      hiddenNews(7, 'desktop');
+    };
+    if ((width <= 820) && (width > 576))   {
+      hiddenNews(5, 'tablet');
+    };
+    if (width < 576)   {
+      hiddenNews(4, 'mobile');
+    };
+  }, {passive: true})
+
+  function hiddenNews(n, screen) {
+    var childs = '.news-actuals__item:nth-child(n+' + n +')';
+    var className = 'news-actuals__item--' + screen + '-hidden';
+    document.querySelectorAll(childs).forEach( e => {
+        e.classList.toggle(className);
+      });
+  };
 
   var tabsItem = $(".recommend-list__item");
   var contentItem = $(".main-article__description");
@@ -121,13 +70,5 @@ const cotentSlider = new Swiper('.content-slider', {
       
   });
 
-  $(".scroll").on("click", function() {
-    var destination = $(this).attr("href");
-    console.log(destination);
-    jQuery("html:not(:animated),body:not(:animated)").animate({
-      scrollTop: $(destination).offset().top
-    }, 1200);
-			return false;
-  });
 
 });

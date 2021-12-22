@@ -27,18 +27,20 @@ $(document).ready(function () {
   var showComments = document.querySelector('.comments-button--load');
   showComments.addEventListener('click', function() {
     var array = document.querySelectorAll('.comment--hidden');
-    console.log(array);
     var length = 3;
-    if (length < array.length) {
+    if (array.length <= 0) { return 0;}; 
+    if ( array.length < length) {
       length = array.length;
     };
     
-    for (var i=0; i<3; i++) {
-      console.log(array[i].classList);
+    for (var i=0; i<length; i++) {
       array[i].classList.remove('comment--hidden');
-      console.log(array[i]);
     };
   }, {passive: true});
+
+  $(".comments-button--short").on("click", function() {
+    $(".feedback").focus();
+  });
 
 });
 

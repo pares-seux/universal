@@ -86,7 +86,6 @@ var modalButton = $('[data-toggle=modal]');
  
   $(".scroll").on("click", function() {
     var destination = $(this).attr("href");
-    console.log(destination);
     jQuery("html:not(:animated),body:not(:animated)").animate({
       scrollTop: $(destination).offset().top
     }, 1200);
