@@ -44,9 +44,7 @@
         padding-bottom: 70px
         text-align: center
         &__title
-            font-family: $roboto
-            font-style: normal
-            font-weight: 700
+            @include title
             font-size: 40px
             line-height: 50px
             margin-top: 0
@@ -60,7 +58,6 @@
     &-information
         padding-bottom: 49px
         display: flex
-
     &-menu
         display: flex
         justify-content: space-between

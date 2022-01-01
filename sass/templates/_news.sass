@@ -14,7 +14,6 @@
     &-item
         display: flex
         padding-top: 25px
-
         &:not(&:last-child)
             padding-bottom: 24px
             border-bottom: $pipe
@@ -36,9 +35,7 @@
         &__title
             margin-top: 15px
             margin-bottom: 10px
-            font-family: $roboto
-            font-style: normal
-            font-weight: 700
+            @include title
             font-size: 20px
             line-height: 25px
             text-decoration: none

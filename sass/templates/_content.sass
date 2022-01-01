@@ -26,9 +26,7 @@
             margin-right: 11px
         &__title
             margin: 45px 0 30px
-            font-family: $roboto
-            font-style: normal
-            font-weight: 700
+            @include title
             font-size: 25px
             line-height: 30px
             color: $dark
@@ -38,9 +36,7 @@
         z-index: 5
         &__text
             margin: 80px 0 45px
-            font-family: $roboto
-            font-style: normal
-            font-weight: 700
+            @include title
             font-size: 25px
             line-height: 30px
             color: $dark
@@ -143,9 +139,7 @@
             text-align: center
         &__name
             margin-bottom: 5px
-            font-family: $roboto
-            font-style: normal
-            font-weight: 700
+            @include title
             font-size: 20px
             line-height: 25px
             color: $dark
@@ -174,9 +168,7 @@
     &__title
         margin-top: 0
         margin-bottom: 25px
-        font-family: $roboto
-        font-style: normal
-        font-weight: 700
+        @include title
         font-size: 25px
         line-height: 30px
         color: $dark
@@ -200,9 +192,7 @@
 .card
     width: 263px
     &-title
-        font-family: $roboto
-        font-style: normal
-        font-weight: 700
+        @include title
         line-height: 25px
         color: $dark
         &--main
